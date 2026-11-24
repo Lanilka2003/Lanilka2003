@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 317 56" width="317" height="56">
+<defs>
+<linearGradient id="left" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a0f1a"/><stop offset="1" stop-color="#111827"/></linearGradient>
+<linearGradient id="right" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d4ed8"/><stop offset="1" stop-color="#0ea5e9"/></linearGradient>
+<linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset=".5" stop-color="#ffffff" stop-opacity=".35"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="border" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="317" y2="56">
+  <stop offset="0" stop-color="#38bdf8"/><stop offset=".33" stop-color="#1e3a8a"/><stop offset=".66" stop-color="#475569"/><stop offset="1" stop-color="#38bdf8"/>
+  <animateTransform attributeName="gradientTransform" type="rotate" from="0 158.5 28.0" to="360 158.5 28.0" dur="6s" repeatCount="indefinite"/>
+</linearGradient>
+<clipPath id="clip"><rect x="1" y="1" width="315" height="54" rx="8"/></clipPath>
+<clipPath id="lclip"><rect x="0" y="0" width="123" height="56"/></clipPath>
+</defs>
+<style>
+.shine { animation: sh 3.5s ease-in-out infinite; }
+@keyframes sh { 0% { transform: translateX(-140px) } 60%,100% { transform: translateX(234px) } }
+.in { animation: in .7s ease-out backwards; } @keyframes in { from { opacity:0 } to { opacity:1 } }
+.ic { transform-box: fill-box; transform-origin: center; animation: ic 3s ease-in-out infinite; }
+@keyframes ic { 0%,100% { transform: scale(1) } 50% { transform: scale(1.08) } }
+</style>
+<g clip-path="url(#clip)">
+<rect width="123" height="56" fill="url(#left)"/>
+<g clip-path="url(#lclip)">
+<path d="M-80,20.7 L-76,20.3 L-72,19.8 L-68,19.2 L-64,18.4 L-60,17.6 L-56,16.7 L-52,15.8 L-48,15.0 L-44,14.2 L-40,13.6 L-36,13.2 L-32,12.9 L-28,12.8 L-24,12.9 L-20,13.2 L-16,13.7 L-12,14.3 L-8,15.1 L-4,15.9 L0,16.8 L4,17.7 L8,18.5 L12,19.3 L16,19.9 L20,20.4 L24,20.7 L28,20.8 L32,20.7 L36,20.4 L40,20.0 L44,19.4 L48,18.6 L52,17.8 L56,16.9 L60,16.0 L64,15.2 L68,14.4 L72,13.8 L76,13.3 L80,12.9 L84,12.8 L88,12.9 L92,13.1 L96,13.5 L100,14.1 L104,14.9 L108,15.7 L112,16.6 L116,17.4 L120,18.3 L124,19.1 L128,19.7 L132,20.3 L136,20.6 L140,20.8 L144,20.8 L148,20.5 L152,20.1 L156,19.6 L160,18.8 L164,18.0 L168,17.2 L172,16.3 L176,15.4 L180,14.6 L184,13.9 L188,13.4 L192,13.0 L196,12.8 L200,12.8" fill="none" stroke="#38bdf8" stroke-opacity=".12" stroke-width="1.5"><animateTransform attributeName="transform" type="translate" values="0 0;60 0;0 0" dur="6s" repeatCount="indefinite"/></path>
+<path d="M-80,29.2 L-76,28.3 L-72,27.4 L-68,26.6 L-64,25.8 L-60,25.1 L-56,24.6 L-52,24.2 L-48,24.0 L-44,24.0 L-40,24.2 L-36,24.6 L-32,25.2 L-28,25.9 L-24,26.7 L-20,27.6 L-16,28.4 L-12,29.3 L-8,30.1 L-4,30.8 L0,31.4 L4,31.8 L8,32.0 L12,32.0 L16,31.8 L20,31.4 L24,30.9 L28,30.2 L32,29.4 L36,28.6 L40,27.7 L44,26.8 L48,26.0 L52,25.3 L56,24.7 L60,24.3 L64,24.0 L68,24.0 L72,24.2 L76,24.5 L80,25.0 L84,25.7 L88,26.5 L92,27.3 L96,28.2 L100,29.1 L104,29.9 L108,30.6 L112,31.2 L116,31.7 L120,31.9 L124,32.0 L128,31.9 L132,31.5 L136,31.1 L140,30.4 L144,29.6 L148,28.8 L152,27.9 L156,27.0 L160,26.2 L164,25.5 L168,24.8 L172,24.4 L176,24.1 L180,24.0 L184,24.1 L188,24.4 L192,24.9 L196,25.5 L200,26.2" fill="none" stroke="#60a5fa" stroke-opacity=".12" stroke-width="1.5"><animateTransform attributeName="transform" type="translate" values="0 0;-60 0;0 0" dur="8s" repeatCount="indefinite"/></path>
+<path d="M-80,36.6 L-76,36.0 L-72,35.6 L-68,35.3 L-64,35.2 L-60,35.3 L-56,35.6 L-52,36.1 L-48,36.7 L-44,37.5 L-40,38.3 L-36,39.2 L-32,40.1 L-28,40.9 L-24,41.7 L-20,42.3 L-16,42.8 L-12,43.1 L-8,43.2 L-4,43.1 L0,42.8 L4,42.4 L8,41.8 L12,41.0 L16,40.2 L20,39.3 L24,38.4 L28,37.6 L32,36.8 L36,36.2 L40,35.7 L44,35.3 L48,35.2 L52,35.3 L56,35.5 L60,35.9 L64,36.5 L68,37.3 L72,38.1 L76,39.0 L80,39.8 L84,40.7 L88,41.5 L92,42.1 L96,42.7 L100,43.0 L104,43.2 L108,43.2 L112,42.9 L116,42.5 L120,42.0 L124,41.2 L128,40.4 L132,39.6 L136,38.7 L140,37.8 L144,37.0 L148,36.3 L152,35.8 L156,35.4 L160,35.2 L164,35.2 L168,35.4 L172,35.8 L176,36.4 L180,37.1 L184,37.9 L188,38.7 L192,39.6 L196,40.5 L200,41.3" fill="none" stroke="#93c5fd" stroke-opacity=".12" stroke-width="1.5"><animateTransform attributeName="transform" type="translate" values="0 0;60 0;0 0" dur="10s" repeatCount="indefinite"/></path>
+</g>
+<rect x="123" width="194" height="56" fill="url(#right)"/>
+<g transform="translate(123,0)"><rect class="shine" x="0" y="0" width="90" height="56" fill="url(#shine)" transform="skewX(-20)"/></g>
+<line x1="123" y1="0" x2="123" y2="56" stroke="#ffffff" stroke-opacity=".15"/>
+<g class="in"><image class="ic" x="18" y="14.0" width="28" height="28" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgdmlld0JveD0iMCAwIDI1NiAyNTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiByeD0iNjAiIGZpbGw9IiMyNDI5MzgiLz4KPHBhdGggZD0iTTQxLjYzNjQgMjAzLjAyOEg3My40NTQ1VjEyNS43NTVMMjggOTEuNjY0NlYxODkuMzkyQzI4IDE5Ni45MzcgMzQuMTEzNiAyMDMuMDI4IDQxLjYzNjQgMjAzLjAyOFoiIGZpbGw9IiM0Mjg1RjQiLz4KPHBhdGggZD0iTTE4Mi41NDUgMjAzLjAyOEgyMTQuMzY0QzIyMS45MDkgMjAzLjAyOCAyMjggMTk2LjkxNSAyMjggMTg5LjM5MlY5MS42NjQ2TDE4Mi41NDUgMTI1Ljc1NSIgZmlsbD0iIzM0QTg1MyIvPgo8cGF0aCBkPSJNMTgyLjU0NSA2Ni42NjQzVjEyNS43NTVMMjI4IDkxLjY2NDNWNzMuNDgyNUMyMjggNTYuNjE4OSAyMDguNzUgNDcuMDA1MiAxOTUuMjczIDU3LjExODkiIGZpbGw9IiNGQkJDMDQiLz4KPHBhdGggZD0iTTczLjQ1NDUgMTI1Ljc1NVY2Ni42NjQ2TDEyOCAxMDcuNTc0TDE4Mi41NDUgNjYuNjY0NlYxMjUuNzU1TDEyOCAxNjYuNjY1IiBmaWxsPSIjRUE0MzM1Ii8+CjxwYXRoIGQ9Ik0yOCA3My40ODI1VjkxLjY2NDNMNzMuNDU0NSAxMjUuNzU1VjY2LjY2NDNMNjAuNzI3MyA1Ny4xMTg5QzQ3LjIyNzMgNDcuMDA1MiAyOCA1Ni42MTg5IDI4IDczLjQ4MjVaIiBmaWxsPSIjQzUyMjFGIi8+Cjwvc3ZnPgo="/>
+<text x="56" y="34.5" font-family="-apple-system, 'Segoe UI', Verdana, Helvetica, Arial, sans-serif" font-size="17" letter-spacing="2" fill="#e2e8f0">EMAIL</text>
+<text x="220.0" y="34.5" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Verdana, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2.5" fill="#ffffff">CONTACT ME</text></g>
+</g>
+<rect x="1" y="1" width="315" height="54" rx="8" fill="none" stroke="url(#border)" stroke-width="2"/>
+</svg>

@@ -20,7 +20,7 @@ OUTPUT = os.environ.get("OUTPUT", "assets/github-stats.svg")
 DISPLAY = os.environ.get("DISPLAY_NAME", "")
 
 SANS = "-apple-system, 'Segoe UI', Ubuntu, Helvetica, Arial, sans-serif"
-CY, LI, PK, AM, GR = "#67e8f9", "#c4b5fd", "#f9a8d4", "#fcd34d", "#86efac"
+CY, LI, PK, AM, GR = "#38bdf8", "#60a5fa", "#93c5fd", "#7dd3fc", "#2dd4bf"
 
 QUERY = """
 query($login: String!, $from: DateTime!, $to: DateTime!) {
@@ -100,12 +100,12 @@ def render(d, placeholder=False):
     s = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}">']
     s.append(f'''<defs>
 <linearGradient id="title" gradientUnits="userSpaceOnUse" x1="36" y1="0" x2="420" y2="0" spreadMethod="reflect">
-  <stop offset="0" stop-color="{CY}"/><stop offset=".5" stop-color="{LI}"/><stop offset="1" stop-color="{PK}"/>
+  <stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#bae6fd"/><stop offset="1" stop-color="#ffffff"/>
   <animateTransform attributeName="gradientTransform" type="translate" values="0 0;380 0;0 0" dur="7s" repeatCount="indefinite"/>
 </linearGradient>
 <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{CY}"/><stop offset=".5" stop-color="{LI}"/><stop offset="1" stop-color="{PK}"/></linearGradient>
 <linearGradient id="border" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="{W}" y2="{H}">
-  <stop offset="0" stop-color="{CY}"/><stop offset=".33" stop-color="#a78bfa"/><stop offset=".66" stop-color="#f472b6"/><stop offset="1" stop-color="{CY}"/>
+  <stop offset="0" stop-color="#38bdf8"/><stop offset=".33" stop-color="#1e3a8a"/><stop offset=".66" stop-color="#475569"/><stop offset="1" stop-color="#38bdf8"/>
   <animateTransform attributeName="gradientTransform" type="rotate" from="0 {W/2} {H/2}" to="360 {W/2} {H/2}" dur="8s" repeatCount="indefinite"/>
 </linearGradient>
 </defs>
@@ -123,8 +123,22 @@ def render(d, placeholder=False):
 .orbit {{ transform-origin: 480px 135px; animation: spin 6s linear infinite; }}
 @keyframes spin {{ to {{ transform: rotate(360deg) }} }}
 </style>''')
-    s.append(f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="18" fill="#0b0b10"/>')
-    s.append(f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="18" fill="none" stroke="url(#border)" stroke-width="2" opacity=".45"/>')
+    s.append(f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="18" fill="#0f172a"/>')
+    # flowing waves, same as the other sections
+    s.append(f'<defs><clipPath id="clip"><rect x="1" y="1" width="{W-2}" height="{H-2}" rx="18"/></clipPath>'
+             f'<filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter></defs>')
+    s.append('<g clip-path="url(#clip)">')
+    s.append(f'<g filter="url(#blur)" opacity=".22"><circle cx="{W*0.15:.0f}" cy="{H*0.2:.0f}" r="{H*0.45:.0f}" fill="#0ea5e9"/>'
+             f'<circle cx="{W*0.88:.0f}" cy="{H*0.75:.0f}" r="{H*0.5:.0f}" fill="#1d4ed8"/></g>')
+    for k in range(5):
+        y0 = H * (0.25 + 0.15 * k)
+        amp = 10 + 4 * k
+        pts = " L".join(f"{x},{y0 + amp*math.sin(x/90 + k):.1f}" for x in range(-200, W + 201, 10))
+        col = [CY, LI, PK][k % 3]
+        s.append(f'<path d="M{pts}" fill="none" stroke="{col}" stroke-opacity=".05" stroke-width="2">'
+                 f'<animateTransform attributeName="transform" type="translate" values="0 0;{-180 if k%2 else 180} 0;0 0" dur="{14+k*3}s" repeatCount="indefinite"/></path>')
+    s.append('</g>')
+    s.append(f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="18" fill="none" stroke="url(#border)" stroke-width="2" opacity=".8"/>')
     s.append(f'<text x="36" y="52" class="title" font-family="{SANS}" font-size="24" font-weight="700" fill="url(#title)">{esc(name)}\'s GitHub Stats</text>')
     for i, (ic, label, val, col) in enumerate(rows):
         y = 92 + i * 32

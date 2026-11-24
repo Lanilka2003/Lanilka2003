@@ -3,9 +3,9 @@
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/lanilka-rathnaweera-35a942205"><img src="https://img.shields.io/badge/LinkedIn-Lanilka_Rathnaweera-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0b0b10" alt="LinkedIn" /></a>
-  <a href="mailto:lanilkarathnaweera@gmail.com"><img src="https://img.shields.io/badge/Email-lanilkarathnaweera@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0b0b10" alt="Email" /></a>
-  <a href="https://github.com/Lanilka2003?tab=repositories"><img src="https://img.shields.io/badge/GitHub-Projects-38BDF8?style=for-the-badge&logo=github&logoColor=white&labelColor=0b0b10" alt="GitHub projects" /></a>
+  <a href="https://www.linkedin.com/in/lanilka-rathnaweera-35a942205"><img src="assets/links/linkedin.svg" height="44" alt="LinkedIn – Connect" /></a>
+  <a href="mailto:lanilkarathnaweera@gmail.com"><img src="assets/links/email.svg" height="44" alt="Email – Contact me" /></a>
+  <a href="https://github.com/Lanilka2003?tab=repositories"><img src="assets/links/github.svg" height="44" alt="GitHub – My projects" /></a>
 </p>
 
 <br/>
@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Lanilka2003/TropicStore"><img src="assets/projects/tropic.svg" width="32%" alt="tropic" /></a>
+  <a href="https://github.com/TropicStore"><img src="assets/projects/tropic.svg" width="32%" alt="tropic" /></a>
   <a href="https://github.com/Rifthy2003/Smart-Farming"><img src="assets/projects/farm.svg" width="32%" alt="farm" /></a>
   <a href="https://github.com/Lanilka2003/Meetup-Booking-System"><img src="assets/projects/meetup.svg" width="32%" alt="meetup" /></a>
 </p>
@@ -56,10 +56,10 @@
 
 <p align="center">
   <img src="assets/github-stats.svg" height="200" alt="GitHub stats" />
-  <img height="200" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Lanilka2003&layout=compact&hide_border=true&border_radius=16&bg_color=0b0b10&title_color=c4b5fd&text_color=e2e8f0" />
+  <img height="200" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Lanilka2003&layout=compact&hide_border=true&border_radius=16&bg_color=0f172a&title_color=38bdf8&text_color=e2e8f0" />
 </p>
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=Lanilka2003&hide_border=true&border_radius=16&background=0b0b10&ring=c4b5fd&fire=f9a8d4&currStreakLabel=67e8f9&sideLabels=c4b5fd&currStreakNum=e2e8f0&sideNums=e2e8f0&dates=94a3b8&stroke=1e293b" />
+  <img src="https://streak-stats.demolab.com?user=Lanilka2003&hide_border=true&border_radius=16&background=0f172a&ring=38bdf8&fire=7dd3fc&currStreakLabel=38bdf8&sideLabels=93c5fd&currStreakNum=e2e8f0&sideNums=e2e8f0&dates=94a3b8&stroke=1e293b" />
 </p>
 
 <p align="center">

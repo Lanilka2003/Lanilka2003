@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 430" width="400" height="430">
 <defs>
-<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#09090b"/><stop offset=".6" stop-color="#0b0b10"/><stop offset="1" stop-color="#0d0d12"/></linearGradient>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a0f1a"/><stop offset=".6" stop-color="#0f172a"/><stop offset="1" stop-color="#111827"/></linearGradient>
 <linearGradient id="border" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="400" y2="430">
-  <stop offset="0" stop-color="#67e8f9"/><stop offset=".33" stop-color="#a78bfa"/><stop offset=".66" stop-color="#f472b6"/><stop offset="1" stop-color="#67e8f9"/>
+  <stop offset="0" stop-color="#38bdf8"/><stop offset=".33" stop-color="#1e3a8a"/><stop offset=".66" stop-color="#475569"/><stop offset="1" stop-color="#38bdf8"/>
   <animateTransform attributeName="gradientTransform" type="rotate" from="0 200.0 215.0" to="360 200.0 215.0" dur="8s" repeatCount="indefinite"/>
 </linearGradient>
 <linearGradient id="title" gradientUnits="userSpaceOnUse" x1="40" y1="0" x2="420" y2="0" spreadMethod="reflect">
-  <stop offset="0" stop-color="#67e8f9"/><stop offset=".5" stop-color="#c4b5fd"/><stop offset="1" stop-color="#f9a8d4"/>
+  <stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#bae6fd"/><stop offset="1" stop-color="#ffffff"/>
   <animateTransform attributeName="gradientTransform" type="translate" values="0 0;380 0;0 0" dur="7s" repeatCount="indefinite"/>
 </linearGradient>
 <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
@@ -28,8 +28,16 @@
 </style>
 <g clip-path="url(#clip)">
 <rect width="400" height="430" fill="url(#bg)"/>
-<defs><pattern id="pat" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="9" height="26" fill="#ffffff" fill-opacity=".02"/><animateTransform attributeName="patternTransform" type="translate" additive="sum" from="0 0" to="26 0" dur="5s" repeatCount="indefinite"/></pattern></defs>
-<rect width="400" height="430" fill="url(#pat)"/>
+<g filter="url(#blur)" opacity="0.22">
+<circle cx="60" cy="86" r="135" fill="#0ea5e9" class="o1"/>
+<circle cx="352" cy="322" r="150" fill="#1d4ed8" class="o2"/>
+<circle cx="220" cy="430" r="105" fill="#1e40af" class="o1" opacity=".6"/>
+</g>
+<path d="M-200,99.5 L-190,98.9 L-180,98.4 L-170,98.0 L-160,97.7 L-150,97.5 L-140,97.5 L-130,97.6 L-120,97.8 L-110,98.1 L-100,98.5 L-90,99.1 L-80,99.7 L-70,100.5 L-60,101.3 L-50,102.2 L-40,103.2 L-30,104.2 L-20,105.3 L-10,106.4 L0,107.5 L10,108.6 L20,109.7 L30,110.8 L40,111.8 L50,112.8 L60,113.7 L70,114.5 L80,115.3 L90,115.9 L100,116.5 L110,116.9 L120,117.2 L130,117.4 L140,117.5 L150,117.5 L160,117.3 L170,117.0 L180,116.6 L190,116.1 L200,115.5 L210,114.7 L220,113.9 L230,113.0 L240,112.1 L250,111.1 L260,110.0 L270,108.9 L280,107.8 L290,106.7 L300,105.6 L310,104.5 L320,103.5 L330,102.5 L340,101.6 L350,100.7 L360,99.9 L370,99.3 L380,98.7 L390,98.2 L400,97.9 L410,97.6 L420,97.5 L430,97.5 L440,97.7 L450,97.9 L460,98.3 L470,98.8 L480,99.4 L490,100.1 L500,100.8 L510,101.7 L520,102.7 L530,103.7 L540,104.7 L550,105.8 L560,106.9 L570,108.0 L580,109.1 L590,110.2 L600,111.2" fill="none" stroke="#38bdf8" stroke-opacity=".05" stroke-width="2"><animateTransform attributeName="transform" type="translate" values="0 0;180 0;0 0" dur="14s" repeatCount="indefinite"/></path>
+<path d="M-200,158.8 L-190,159.5 L-180,160.2 L-170,161.1 L-160,162.2 L-150,163.3 L-140,164.6 L-130,166.0 L-120,167.4 L-110,168.9 L-100,170.4 L-90,172.0 L-80,173.6 L-70,175.1 L-60,176.6 L-50,178.0 L-40,179.4 L-30,180.7 L-20,181.8 L-10,182.9 L0,183.8 L10,184.5 L20,185.2 L30,185.6 L40,185.9 L50,186.0 L60,185.9 L70,185.7 L80,185.3 L90,184.7 L100,184.0 L110,183.1 L120,182.1 L130,181.0 L140,179.7 L150,178.4 L160,177.0 L170,175.5 L180,174.0 L190,172.4 L200,170.9 L210,169.3 L220,167.8 L230,166.4 L240,165.0 L250,163.7 L260,162.5 L270,161.4 L280,160.5 L290,159.6 L300,159.0 L310,158.5 L320,158.2 L330,158.0 L340,158.0 L350,158.2 L360,158.6 L370,159.1 L380,159.8 L390,160.6 L400,161.6 L410,162.7 L420,163.9 L430,165.2 L440,166.6 L450,168.1 L460,169.6 L470,171.1 L480,172.7 L490,174.2 L500,175.8 L510,177.2 L520,178.6 L530,180.0 L540,181.2 L550,182.3 L560,183.3 L570,184.1 L580,184.8 L590,185.4 L600,185.8" fill="none" stroke="#60a5fa" stroke-opacity=".05" stroke-width="2"><animateTransform attributeName="transform" type="translate" values="0 0;-180 0;0 0" dur="17s" repeatCount="indefinite"/></path>
+<path d="M-200,232.5 L-190,234.5 L-180,236.5 L-170,238.5 L-160,240.5 L-150,242.4 L-140,244.2 L-130,246.0 L-120,247.6 L-110,249.1 L-100,250.5 L-90,251.6 L-80,252.6 L-70,253.4 L-60,254.0 L-50,254.4 L-40,254.5 L-30,254.4 L-20,254.1 L-10,253.6 L0,252.9 L10,251.9 L20,250.8 L30,249.5 L40,248.1 L50,246.5 L60,244.7 L70,242.9 L80,241.0 L90,239.0 L100,237.0 L110,235.1 L120,233.1 L130,231.1 L140,229.3 L150,227.5 L160,225.8 L170,224.3 L180,222.9 L190,221.7 L200,220.6 L210,219.8 L220,219.1 L230,218.7 L240,218.5 L250,218.5 L260,218.8 L270,219.2 L280,219.9 L290,220.8 L300,221.9 L310,223.1 L320,224.5 L330,226.1 L340,227.8 L350,229.6 L360,231.5 L370,233.4 L380,235.4 L390,237.4 L400,239.4 L410,241.3 L420,243.2 L430,245.0 L440,246.7 L450,248.3 L460,249.8 L470,251.0 L480,252.1 L490,253.0 L500,253.7 L510,254.2 L520,254.4 L530,254.5 L540,254.3 L550,253.9 L560,253.3 L570,252.5 L580,251.5 L590,250.2 L600,248.9" fill="none" stroke="#93c5fd" stroke-opacity=".05" stroke-width="2"><animateTransform attributeName="transform" type="translate" values="0 0;180 0;0 0" dur="20s" repeatCount="indefinite"/></path>
+<path d="M-200,316.4 L-190,318.1 L-180,319.5 L-170,320.7 L-160,321.7 L-150,322.4 L-140,322.8 L-130,323.0 L-120,322.9 L-110,322.5 L-100,321.9 L-90,321.0 L-80,319.9 L-70,318.5 L-60,316.9 L-50,315.1 L-40,313.2 L-30,311.1 L-20,308.8 L-10,306.5 L0,304.1 L10,301.7 L20,299.2 L30,296.8 L40,294.4 L50,292.2 L60,290.0 L70,287.9 L80,286.0 L90,284.4 L100,282.9 L110,281.6 L120,280.6 L130,279.8 L140,279.3 L150,279.0 L160,279.0 L170,279.3 L180,279.9 L190,280.7 L200,281.8 L210,283.1 L220,284.6 L230,286.4 L240,288.3 L250,290.3 L260,292.5 L270,294.9 L280,297.2 L290,299.7 L300,302.1 L310,304.5 L320,306.9 L330,309.2 L340,311.4 L350,313.5 L360,315.5 L370,317.2 L380,318.8 L390,320.1 L400,321.2 L410,322.0 L420,322.6 L430,322.9 L440,323.0 L450,322.8 L460,322.3 L470,321.5 L480,320.5 L490,319.3 L500,317.8 L510,316.1 L520,314.3 L530,312.2 L540,310.1 L550,307.8 L560,305.4 L570,303.0 L580,300.6 L590,298.1 L600,295.7" fill="none" stroke="#38bdf8" stroke-opacity=".05" stroke-width="2"><animateTransform attributeName="transform" type="translate" values="0 0;-180 0;0 0" dur="23s" repeatCount="indefinite"/></path>
+<path d="M-200,390.9 L-190,390.2 L-180,389.1 L-170,387.8 L-160,386.2 L-150,384.3 L-140,382.2 L-130,379.9 L-120,377.4 L-110,374.8 L-100,372.0 L-90,369.2 L-80,366.3 L-70,363.4 L-60,360.5 L-50,357.7 L-40,355.0 L-30,352.5 L-20,350.1 L-10,347.8 L0,345.8 L10,344.1 L20,342.6 L30,341.3 L40,340.4 L50,339.8 L60,339.5 L70,339.6 L80,339.9 L90,340.6 L100,341.5 L110,342.8 L120,344.4 L130,346.2 L140,348.2 L150,350.5 L160,352.9 L170,355.5 L180,358.2 L190,361.0 L200,363.9 L210,366.8 L220,369.7 L230,372.5 L240,375.2 L250,377.8 L260,380.3 L270,382.6 L280,384.6 L290,386.5 L300,388.1 L310,389.3 L320,390.4 L330,391.0 L340,391.4 L350,391.5 L360,391.2 L370,390.6 L380,389.8 L390,388.6 L400,387.1 L410,385.4 L420,383.4 L430,381.2 L440,378.8 L450,376.2 L460,373.5 L470,370.7 L480,367.9 L490,365.0 L500,362.1 L510,359.3 L520,356.5 L530,353.9 L540,351.4 L550,349.0 L560,346.9 L570,345.0 L580,343.3 L590,342.0 L600,340.9" fill="none" stroke="#60a5fa" stroke-opacity=".05" stroke-width="2"><animateTransform attributeName="transform" type="translate" values="0 0;180 0;0 0" dur="26s" repeatCount="indefinite"/></path>
 <circle cx="365" cy="403" r="0.7" fill="#ffffff" class="tw" style="animation-delay:-0.07s;animation-duration:2.9s"/>
 <circle cx="153" cy="156" r="0.9" fill="#ffffff" class="tw" style="animation-delay:-1.07s;animation-duration:2.0s"/>
 <circle cx="247" cy="383" r="0.7" fill="#ffffff" class="tw" style="animation-delay:-0.34s;animation-duration:4.1s"/>
@@ -53,40 +61,40 @@
 .dot { animation: dt 1.4s ease-in-out infinite; } @keyframes dt { 50% { opacity:.25 } }
 </style>
 <g class="in"><g class="float">
-<circle cx="200.0" cy="108" r="66" fill="#c4b5fd" opacity=".08"/>
-<rect x="174.0" y="96" width="52" height="24" rx="6" fill="#0f172a" stroke="#c4b5fd" stroke-width="2"/>
-<circle cx="188.0" cy="108" r="3" fill="#c4b5fd" class="dot" style="animation-delay:0.0s"/>
-<circle cx="200.0" cy="108" r="3" fill="#c4b5fd" class="dot" style="animation-delay:0.3s"/>
-<circle cx="212.0" cy="108" r="3" fill="#c4b5fd" class="dot" style="animation-delay:0.6s"/>
-<path d="M188.0,90 a12,12 0 0 1 24,0" fill="none" stroke="#c4b5fd" stroke-width="2" stroke-linecap="round" class="wv" style="animation-delay:0.0s"/>
-<path d="M180.0,88 a20,20 0 0 1 40,0" fill="none" stroke="#c4b5fd" stroke-width="2" stroke-linecap="round" class="wv" style="animation-delay:0.4s"/>
-<line x1="200.0" y1="120" x2="120.0" y2="128" stroke="#c4b5fd" stroke-opacity=".35" stroke-dasharray="3 4"/>
+<circle cx="200.0" cy="108" r="66" fill="#60a5fa" opacity=".08"/>
+<rect x="174.0" y="96" width="52" height="24" rx="6" fill="#0f172a" stroke="#60a5fa" stroke-width="2"/>
+<circle cx="188.0" cy="108" r="3" fill="#60a5fa" class="dot" style="animation-delay:0.0s"/>
+<circle cx="200.0" cy="108" r="3" fill="#60a5fa" class="dot" style="animation-delay:0.3s"/>
+<circle cx="212.0" cy="108" r="3" fill="#60a5fa" class="dot" style="animation-delay:0.6s"/>
+<path d="M188.0,90 a12,12 0 0 1 24,0" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" class="wv" style="animation-delay:0.0s"/>
+<path d="M180.0,88 a20,20 0 0 1 40,0" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" class="wv" style="animation-delay:0.4s"/>
+<line x1="200.0" y1="120" x2="120.0" y2="128" stroke="#60a5fa" stroke-opacity=".35" stroke-dasharray="3 4"/>
 <text x="120.0" y="146" text-anchor="middle" font-size="20">💻</text>
 <rect x="136.0" y="120" width="7" height="40" rx="2" fill="#1e293b"/>
-<rect x="136.0" y="120" width="7" height="40" rx="2" fill="#c4b5fd"><animate attributeName="height" values="40;14;24;40" dur="4s" repeatCount="indefinite"/><animate attributeName="y" values="120;146;136;120" dur="4s" repeatCount="indefinite"/></rect>
-<line x1="200.0" y1="120" x2="200.0" y2="144" stroke="#c4b5fd" stroke-opacity=".35" stroke-dasharray="3 4"/>
+<rect x="136.0" y="120" width="7" height="40" rx="2" fill="#60a5fa"><animate attributeName="height" values="40;14;24;40" dur="4s" repeatCount="indefinite"/><animate attributeName="y" values="120;146;136;120" dur="4s" repeatCount="indefinite"/></rect>
+<line x1="200.0" y1="120" x2="200.0" y2="144" stroke="#60a5fa" stroke-opacity=".35" stroke-dasharray="3 4"/>
 <text x="200.0" y="162" text-anchor="middle" font-size="20">📱</text>
 <rect x="216.0" y="136" width="7" height="40" rx="2" fill="#1e293b"/>
-<rect x="216.0" y="162" width="7" height="14" rx="2" fill="#c4b5fd"><animate attributeName="height" values="14;36;20;14" dur="4s" repeatCount="indefinite"/><animate attributeName="y" values="162;140;156;162" dur="4s" repeatCount="indefinite"/></rect>
-<line x1="200.0" y1="120" x2="280.0" y2="128" stroke="#c4b5fd" stroke-opacity=".35" stroke-dasharray="3 4"/>
+<rect x="216.0" y="162" width="7" height="14" rx="2" fill="#60a5fa"><animate attributeName="height" values="14;36;20;14" dur="4s" repeatCount="indefinite"/><animate attributeName="y" values="162;140;156;162" dur="4s" repeatCount="indefinite"/></rect>
+<line x1="200.0" y1="120" x2="280.0" y2="128" stroke="#60a5fa" stroke-opacity=".35" stroke-dasharray="3 4"/>
 <text x="280.0" y="146" text-anchor="middle" font-size="20">📺</text>
 <rect x="296.0" y="120" width="7" height="40" rx="2" fill="#1e293b"/>
-<rect x="296.0" y="136" width="7" height="24" rx="2" fill="#c4b5fd"><animate attributeName="height" values="24;20;36;24" dur="4s" repeatCount="indefinite"/><animate attributeName="y" values="136;140;124;136" dur="4s" repeatCount="indefinite"/></rect>
+<rect x="296.0" y="136" width="7" height="24" rx="2" fill="#60a5fa"><animate attributeName="height" values="24;20;36;24" dur="4s" repeatCount="indefinite"/><animate attributeName="y" values="136;140;124;136" dur="4s" repeatCount="indefinite"/></rect>
 </g></g>
-<g class="in" style="animation-delay:.2s"><rect x="282" y="22" width="94" height="24" rx="12" fill="#c4b5fd" fill-opacity=".15" stroke="#c4b5fd" stroke-opacity=".5"/><circle cx="295" cy="34" r="3.5" fill="#c4b5fd" class="dot"/><text x="304" y="38.5" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" fill="#c4b5fd">🚀 Planned</text></g>
+<g class="in" style="animation-delay:.2s"><rect x="282" y="22" width="94" height="24" rx="12" fill="#60a5fa" fill-opacity=".15" stroke="#60a5fa" stroke-opacity=".5"/><circle cx="295" cy="34" r="3.5" fill="#60a5fa" class="dot"/><text x="304" y="38.5" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" fill="#60a5fa">🚀 Planned</text></g>
 <g class="in" style="animation-delay:.3s">
-<text x="28" y="222" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="25" font-weight="800" fill="#c4b5fd">Attention-Aware LAN</text>
+<text x="28" y="222" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="25" font-weight="800" fill="#60a5fa">Attention-Aware LAN</text>
 <text x="28" y="246" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#94a3b8">Distributed Bandwidth Coordination</text>
 <text x="28" y="280" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15.5" fill="#cbd5e1">Will share bandwidth fairly across</text>
 <text x="28" y="302" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15.5" fill="#cbd5e1">devices on home and office</text>
 <text x="28" y="324" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15.5" fill="#cbd5e1">networks.</text>
-<rect x="28" y="344" width="91" height="28" rx="14" fill="#c4b5fd" fill-opacity=".1" stroke="#c4b5fd" stroke-opacity=".55"/><text x="74" y="363" text-anchor="middle" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" fill="#c4b5fd">Networking</text>
-<rect x="126" y="344" width="155" height="28" rx="14" fill="#c4b5fd" fill-opacity=".1" stroke="#c4b5fd" stroke-opacity=".55"/><text x="204" y="363" text-anchor="middle" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" fill="#c4b5fd">Distributed Systems</text>
+<rect x="28" y="344" width="91" height="28" rx="14" fill="#60a5fa" fill-opacity=".1" stroke="#60a5fa" stroke-opacity=".55"/><text x="74" y="363" text-anchor="middle" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" fill="#60a5fa">Networking</text>
+<rect x="126" y="344" width="155" height="28" rx="14" fill="#60a5fa" fill-opacity=".1" stroke="#60a5fa" stroke-opacity=".55"/><text x="204" y="363" text-anchor="middle" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" fill="#60a5fa">Distributed Systems</text>
 </g>
-<rect x="12" y="12" width="376" height="406" rx="16" fill="none" stroke="#c4b5fd" stroke-opacity=".45" stroke-width="1.5" stroke-dasharray="8 7"><animate attributeName="stroke-dashoffset" values="0;-60" dur="3s" repeatCount="indefinite"/></rect>
-<line x1="28" y1="390" x2="372" y2="390" stroke="#c4b5fd" stroke-opacity=".15"/>
-<text x="28" y="414" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#c4b5fd">View on GitHub <tspan class="arrow">→</tspan></text>
+<rect x="12" y="12" width="376" height="406" rx="16" fill="none" stroke="#60a5fa" stroke-opacity=".45" stroke-width="1.5" stroke-dasharray="8 7"><animate attributeName="stroke-dashoffset" values="0;-60" dur="3s" repeatCount="indefinite"/></rect>
+<line x1="28" y1="390" x2="372" y2="390" stroke="#60a5fa" stroke-opacity=".15"/>
+<text x="28" y="414" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#60a5fa">View on GitHub <tspan class="arrow">→</tspan></text>
 <text x="372" y="414" text-anchor="end" font-size="14" fill="#94a3b8" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">⭐</text>
 </g>
-<rect x="2" y="2" width="396" height="426" rx="23" fill="none" stroke="url(#border)" stroke-width="2" opacity="0.45"/>
+<rect x="2" y="2" width="396" height="426" rx="23" fill="none" stroke="url(#border)" stroke-width="2" opacity=".8"/>
 </svg>
