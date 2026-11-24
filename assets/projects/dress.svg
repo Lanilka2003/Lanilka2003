@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 430" width="400" height="430">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#09090b"/><stop offset=".6" stop-color="#0b0b10"/><stop offset="1" stop-color="#0d0d12"/></linearGradient>
+<linearGradient id="border" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="400" y2="430">
+  <stop offset="0" stop-color="#67e8f9"/><stop offset=".33" stop-color="#a78bfa"/><stop offset=".66" stop-color="#f472b6"/><stop offset="1" stop-color="#67e8f9"/>
+  <animateTransform attributeName="gradientTransform" type="rotate" from="0 200.0 215.0" to="360 200.0 215.0" dur="8s" repeatCount="indefinite"/>
+</linearGradient>
+<linearGradient id="title" gradientUnits="userSpaceOnUse" x1="40" y1="0" x2="420" y2="0" spreadMethod="reflect">
+  <stop offset="0" stop-color="#67e8f9"/><stop offset=".5" stop-color="#c4b5fd"/><stop offset="1" stop-color="#f9a8d4"/>
+  <animateTransform attributeName="gradientTransform" type="translate" values="0 0;380 0;0 0" dur="7s" repeatCount="indefinite"/>
+</linearGradient>
+<filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<clipPath id="clip"><rect x="3" y="3" width="394" height="424" rx="22"/></clipPath>
+</defs>
+<style>
+.in { animation: up .9s cubic-bezier(.2,.8,.2,1) backwards; }
+@keyframes up { from { opacity:0; transform: translateY(14px) } to { opacity:1; transform:none } }
+.tw { animation: tw 3s ease-in-out infinite; } @keyframes tw { 0%,100% { opacity:.1 } 50% { opacity:1 } }
+.o1 { animation: o1 14s ease-in-out infinite; } @keyframes o1 { 50% { transform: translate(90px,20px) } }
+.o2 { animation: o2 17s ease-in-out infinite; } @keyframes o2 { 50% { transform: translate(-90px,-20px) } }
+.pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2.6s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { transform: scale(.85); opacity:.6 } 50% { transform: scale(1.15); opacity:1 } }
+.float { animation: fl 5s ease-in-out infinite; } @keyframes fl { 50% { transform: translateY(-6px) } }
+.blink { animation: bl 1s step-end infinite; } @keyframes bl { 50% { opacity:0 } }
+.shoot { animation: shoot 8s ease-in infinite; opacity:0; }
+@keyframes shoot { 0% { transform: translate(0,0); opacity:0 } 2% { opacity:1 } 12% { transform: translate(360px,130px); opacity:0 } 100% { opacity:0 } }
+</style>
+<g clip-path="url(#clip)">
+<rect width="400" height="430" fill="url(#bg)"/>
+<defs><pattern id="pat" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="9" height="26" fill="#ffffff" fill-opacity=".02"/><animateTransform attributeName="patternTransform" type="translate" additive="sum" from="0 0" to="26 0" dur="5s" repeatCount="indefinite"/></pattern></defs>
+<rect width="400" height="430" fill="url(#pat)"/>
+<circle cx="282" cy="357" r="0.9" fill="#ffffff" class="tw" style="animation-delay:-0.87s;animation-duration:2.5s"/>
+<circle cx="72" cy="291" r="0.9" fill="#ffffff" class="tw" style="animation-delay:-3.23s;animation-duration:2.9s"/>
+<circle cx="364" cy="11" r="1.4" fill="#ffffff" class="tw" style="animation-delay:-3.46s;animation-duration:5.0s"/>
+<circle cx="51" cy="222" r="1.4" fill="#ffffff" class="tw" style="animation-delay:-2.96s;animation-duration:3.3s"/>
+<circle cx="124" cy="404" r="0.7" fill="#ffffff" class="tw" style="animation-delay:-2.75s;animation-duration:2.8s"/>
+<circle cx="243" cy="291" r="1.1" fill="#ffffff" class="tw" style="animation-delay:-0.30s;animation-duration:3.9s"/>
+<circle cx="262" cy="20" r="0.9" fill="#ffffff" class="tw" style="animation-delay:-1.26s;animation-duration:4.7s"/>
+<style>
+.grow { transform-box: fill-box; transform-origin: bottom center; animation: grow 4s ease-out infinite; }
+@keyframes grow { 0% { transform: scaleY(.2) } 50%,100% { transform: scaleY(1) } }
+.leaf { transform-box: fill-box; transform-origin: center; animation: leaf 4s ease-out infinite; }
+@keyframes leaf { 0%,25% { transform: scale(0) } 55%,100% { transform: scale(1) } }
+.drop { animation: drop 2s ease-in infinite; }
+@keyframes drop { 0% { transform: translateY(-14px); opacity:0 } 30% { opacity:1 } 100% { transform: translateY(16px); opacity:0 } }
+.check { stroke-dasharray: 40; animation: check 3s ease-out infinite; }
+@keyframes check { 0%,30% { stroke-dashoffset: 40 } 55%,100% { stroke-dashoffset: 0 } }
+.pop { transform-box: fill-box; transform-origin: left center; animation: pop 3s ease-out infinite; }
+@keyframes pop { 0%,50% { transform: scale(0); opacity:0 } 65%,92% { transform: scale(1); opacity:1 } 100% { opacity:0 } }
+.wv { animation: wv 1.8s ease-in-out infinite; } @keyframes wv { 50% { opacity:.15 } }
+.arrow { animation: ar 1.6s ease-in-out infinite; } @keyframes ar { 50% { transform: translateX(6px) } }
+.dot { animation: dt 1.4s ease-in-out infinite; } @keyframes dt { 50% { opacity:.25 } }
+</style>
+<g class="in"><g class="float">
+<circle cx="200.0" cy="108" r="66" fill="#fcd34d" opacity=".08"/>
+<ellipse cx="200.0" cy="108" rx="44" ry="56" fill="#0f172a" stroke="#fcd34d" stroke-width="2.5"/>
+<ellipse cx="200.0" cy="108" rx="38" ry="50" fill="#fcd34d" fill-opacity=".06"/>
+<circle cx="200.0" cy="82" r="11" fill="#e2e8f0" opacity=".9"/>
+<path d="M178.0,138 L182.0,102 Q200.0,92 218.0,102 L222.0,138 Z" fill="#f9a8d4"><animate attributeName="fill" values="#f9a8d4;#67e8f9;#fcd34d;#c4b5fd;#f9a8d4" dur="6s" repeatCount="indefinite"/></path>
+<path d="M230.0,68 l3,-8 l3,8 l8,3 l-8,3 l-3,8 l-3,-8 l-8,-3z" fill="#fff" class="dot"/>
+<rect x="170.0" y="164" width="60" height="6" rx="3" fill="#fcd34d" opacity=".5"/>
+</g></g>
+<g class="in" style="animation-delay:.2s"><rect x="282" y="22" width="94" height="24" rx="12" fill="#fcd34d" fill-opacity=".15" stroke="#fcd34d" stroke-opacity=".5"/><circle cx="295" cy="34" r="3.5" fill="#fcd34d" class="dot"/><text x="304" y="38.5" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" fill="#fcd34d">🚀 Planned</text></g>
+<g class="in" style="animation-delay:.3s">
+<text x="28" y="222" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="25" font-weight="800" fill="#fcd34d">Virtual Dressing Room</text>
+<text x="28" y="246" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#94a3b8">Try outfits on virtually</text>
+<text x="28" y="280" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15.5" fill="#cbd5e1">Will let you see how clothes look</text>
+<text x="28" y="302" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15.5" fill="#cbd5e1">on you before you buy, right</text>
+<text x="28" y="324" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15.5" fill="#cbd5e1">from your screen.</text>
+<rect x="28" y="344" width="98" height="28" rx="14" fill="#fcd34d" fill-opacity=".1" stroke="#fcd34d" stroke-opacity=".55"/><text x="77" y="363" text-anchor="middle" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" fill="#fcd34d">Coming soon</text>
+</g>
+<rect x="12" y="12" width="376" height="406" rx="16" fill="none" stroke="#fcd34d" stroke-opacity=".45" stroke-width="1.5" stroke-dasharray="8 7"><animate attributeName="stroke-dashoffset" values="0;-60" dur="3s" repeatCount="indefinite"/></rect>
+<line x1="28" y1="390" x2="372" y2="390" stroke="#fcd34d" stroke-opacity=".15"/>
+<text x="28" y="414" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#fcd34d">View on GitHub <tspan class="arrow">→</tspan></text>
+<text x="372" y="414" text-anchor="end" font-size="14" fill="#94a3b8" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">⭐</text>
+</g>
+<rect x="2" y="2" width="396" height="426" rx="23" fill="none" stroke="url(#border)" stroke-width="2" opacity="0.45"/>
+</svg>

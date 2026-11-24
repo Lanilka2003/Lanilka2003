@@ -1,0 +1,41 @@
+name: Update GitHub Stats Card
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"     # every 6 hours
+  workflow_dispatch:            # run it any time from the Actions tab
+  push:
+    branches: [main]
+    paths:
+      - ".github/scripts/github_stats.py"
+      - ".github/workflows/github-stats.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build the animated stats card
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USER: ${{ github.repository_owner }}
+          DISPLAY_NAME: "Lanilka Rathnaweera"
+          OUTPUT: "assets/github-stats.svg"
+        run: python .github/scripts/github_stats.py
+
+      - name: Save the new card
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/github-stats.svg
+          git diff --cached --quiet || git commit -m "📊 Update GitHub stats card"
+          git push

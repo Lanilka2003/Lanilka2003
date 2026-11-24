@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 110" width="1200" height="110">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#09090b"/><stop offset=".6" stop-color="#0b0b10"/><stop offset="1" stop-color="#0d0d12"/></linearGradient>
+<linearGradient id="border" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1200" y2="110">
+  <stop offset="0" stop-color="#67e8f9"/><stop offset=".33" stop-color="#a78bfa"/><stop offset=".66" stop-color="#f472b6"/><stop offset="1" stop-color="#67e8f9"/>
+  <animateTransform attributeName="gradientTransform" type="rotate" from="0 600.0 55.0" to="360 600.0 55.0" dur="8s" repeatCount="indefinite"/>
+</linearGradient>
+<linearGradient id="title" gradientUnits="userSpaceOnUse" x1="40" y1="0" x2="420" y2="0" spreadMethod="reflect">
+  <stop offset="0" stop-color="#67e8f9"/><stop offset=".5" stop-color="#c4b5fd"/><stop offset="1" stop-color="#f9a8d4"/>
+  <animateTransform attributeName="gradientTransform" type="translate" values="0 0;380 0;0 0" dur="7s" repeatCount="indefinite"/>
+</linearGradient>
+<filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<clipPath id="clip"><rect x="3" y="3" width="1194" height="104" rx="22"/></clipPath>
+</defs>
+<style>
+.in { animation: up .9s cubic-bezier(.2,.8,.2,1) backwards; }
+@keyframes up { from { opacity:0; transform: translateY(14px) } to { opacity:1; transform:none } }
+.tw { animation: tw 3s ease-in-out infinite; } @keyframes tw { 0%,100% { opacity:.1 } 50% { opacity:1 } }
+.o1 { animation: o1 14s ease-in-out infinite; } @keyframes o1 { 50% { transform: translate(90px,20px) } }
+.o2 { animation: o2 17s ease-in-out infinite; } @keyframes o2 { 50% { transform: translate(-90px,-20px) } }
+.pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2.6s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { transform: scale(.85); opacity:.6 } 50% { transform: scale(1.15); opacity:1 } }
+.float { animation: fl 5s ease-in-out infinite; } @keyframes fl { 50% { transform: translateY(-6px) } }
+.blink { animation: bl 1s step-end infinite; } @keyframes bl { 50% { opacity:0 } }
+.shoot { animation: shoot 8s ease-in infinite; opacity:0; }
+@keyframes shoot { 0% { transform: translate(0,0); opacity:0 } 2% { opacity:1 } 12% { transform: translate(360px,130px); opacity:0 } 100% { opacity:0 } }
+</style>
+<g clip-path="url(#clip)">
+<rect width="1200" height="110" fill="url(#bg)"/>
+<defs><pattern id="pat" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="9" height="26" fill="#ffffff" fill-opacity=".02"/><animateTransform attributeName="patternTransform" type="translate" additive="sum" from="0 0" to="26 0" dur="5s" repeatCount="indefinite"/></pattern></defs>
+<rect width="1200" height="110" fill="url(#pat)"/>
+<circle cx="275" cy="100" r="0.9" fill="#ffffff" class="tw" style="animation-delay:-0.77s;animation-duration:2.1s"/>
+<circle cx="169" cy="86" r="0.9" fill="#ffffff" class="tw" style="animation-delay:-1.60s;animation-duration:2.1s"/>
+<circle cx="585" cy="44" r="0.9" fill="#ffffff" class="tw" style="animation-delay:-3.59s;animation-duration:3.2s"/>
+<circle cx="582" cy="80" r="1.1" fill="#ffffff" class="tw" style="animation-delay:-2.08s;animation-duration:3.4s"/>
+<circle cx="1088" cy="77" r="1.1" fill="#ffffff" class="tw" style="animation-delay:-0.39s;animation-duration:4.4s"/>
+<circle cx="465" cy="87" r="0.7" fill="#ffffff" class="tw" style="animation-delay:-2.64s;animation-duration:3.0s"/>
+<circle cx="827" cy="55" r="0.9" fill="#ffffff" class="tw" style="animation-delay:-2.33s;animation-duration:2.4s"/>
+<circle cx="82" cy="99" r="1.4" fill="#ffffff" class="tw" style="animation-delay:-2.81s;animation-duration:2.4s"/>
+<circle cx="1028" cy="51" r="1.4" fill="#ffffff" class="tw" style="animation-delay:-1.14s;animation-duration:3.1s"/>
+<circle cx="1049" cy="19" r="0.7" fill="#ffffff" class="tw" style="animation-delay:-2.13s;animation-duration:2.9s"/>
+<g class="in"><text x="44" y="58" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="30" font-weight="800" fill="url(#title)"><tspan class="pulse" fill="#c4b5fd">🚀</tspan> Future Development</text></g>
+<text x="46" y="88" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#94a3b8" class="in" style="animation-delay:.3s">Ideas I am planning to build next  →</text>
+</g>
+<rect x="2" y="2" width="1196" height="106" rx="23" fill="none" stroke="url(#border)" stroke-width="2" opacity="0.45"/>
+</svg>

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 430" width="400" height="430">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#09090b"/><stop offset=".6" stop-color="#0b0b10"/><stop offset="1" stop-color="#0d0d12"/></linearGradient>
+<linearGradient id="border" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="400" y2="430">
+  <stop offset="0" stop-color="#67e8f9"/><stop offset=".33" stop-color="#a78bfa"/><stop offset=".66" stop-color="#f472b6"/><stop offset="1" stop-color="#67e8f9"/>
+  <animateTransform attributeName="gradientTransform" type="rotate" from="0 200.0 215.0" to="360 200.0 215.0" dur="8s" repeatCount="indefinite"/>
+</linearGradient>
+<linearGradient id="title" gradientUnits="userSpaceOnUse" x1="40" y1="0" x2="420" y2="0" spreadMethod="reflect">
+  <stop offset="0" stop-color="#67e8f9"/><stop offset=".5" stop-color="#c4b5fd"/><stop offset="1" stop-color="#f9a8d4"/>
+  <animateTransform attributeName="gradientTransform" type="translate" values="0 0;380 0;0 0" dur="7s" repeatCount="indefinite"/>
+</linearGradient>
+<filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<clipPath id="clip"><rect x="3" y="3" width="394" height="424" rx="22"/></clipPath>
+</defs>
+<style>
+.in { animation: up .9s cubic-bezier(.2,.8,.2,1) backwards; }
+@keyframes up { from { opacity:0; transform: translateY(14px) } to { opacity:1; transform:none } }
+.tw { animation: tw 3s ease-in-out infinite; } @keyframes tw { 0%,100% { opacity:.1 } 50% { opacity:1 } }
+.o1 { animation: o1 14s ease-in-out infinite; } @keyframes o1 { 50% { transform: translate(90px,20px) } }
+.o2 { animation: o2 17s ease-in-out infinite; } @keyframes o2 { 50% { transform: translate(-90px,-20px) } }
+.pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2.6s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { transform: scale(.85); opacity:.6 } 50% { transform: scale(1.15); opacity:1 } }
+.float { animation: fl 5s ease-in-out infinite; } @keyframes fl { 50% { transform: translateY(-6px) } }
+.blink { animation: bl 1s step-end infinite; } @keyframes bl { 50% { opacity:0 } }
+.shoot { animation: shoot 8s ease-in infinite; opacity:0; }
+@keyframes shoot { 0% { transform: translate(0,0); opacity:0 } 2% { opacity:1 } 12% { transform: translate(360px,130px); opacity:0 } 100% { opacity:0 } }
+</style>
+<g clip-path="url(#clip)">
+<rect width="400" height="430" fill="url(#bg)"/>
+<defs><pattern id="pat" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="9" height="26" fill="#ffffff" fill-opacity=".02"/><animateTransform attributeName="patternTransform" type="translate" additive="sum" from="0 0" to="26 0" dur="5s" repeatCount="indefinite"/></pattern></defs>
+<rect width="400" height="430" fill="url(#pat)"/>
+<circle cx="365" cy="403" r="0.7" fill="#ffffff" class="tw" style="animation-delay:-0.07s;animation-duration:2.9s"/>
+<circle cx="153" cy="156" r="0.9" fill="#ffffff" class="tw" style="animation-delay:-1.07s;animation-duration:2.0s"/>
+<circle cx="247" cy="383" r="0.7" fill="#ffffff" class="tw" style="animation-delay:-0.34s;animation-duration:4.1s"/>
+<circle cx="169" cy="220" r="1.4" fill="#ffffff" class="tw" style="animation-delay:-1.44s;animation-duration:2.2s"/>
+<circle cx="310" cy="252" r="0.9" fill="#ffffff" class="tw" style="animation-delay:-2.48s;animation-duration:4.9s"/>
+<circle cx="147" cy="324" r="1.1" fill="#ffffff" class="tw" style="animation-delay:-3.87s;animation-duration:2.8s"/>
+<circle cx="384" cy="246" r="1.4" fill="#ffffff" class="tw" style="animation-delay:-0.71s;animation-duration:3.4s"/>
+<style>
+.grow { transform-box: fill-box; transform-origin: bottom center; animation: grow 4s ease-out infinite; }
+@keyframes grow { 0% { transform: scaleY(.2) } 50%,100% { transform: scaleY(1) } }
+.leaf { transform-box: fill-box; transform-origin: center; animation: leaf 4s ease-out infinite; }
+@keyframes leaf { 0%,25% { transform: scale(0) } 55%,100% { transform: scale(1) } }
+.drop { animation: drop 2s ease-in infinite; }
+@keyframes drop { 0% { transform: translateY(-14px); opacity:0 } 30% { opacity:1 } 100% { transform: translateY(16px); opacity:0 } }
+.check { stroke-dasharray: 40; animation: check 3s ease-out infinite; }
+@keyframes check { 0%,30% { stroke-dashoffset: 40 } 55%,100% { stroke-dashoffset: 0 } }
+.pop { transform-box: fill-box; transform-origin: left center; animation: pop 3s ease-out infinite; }
+@keyframes pop { 0%,50% { transform: scale(0); opacity:0 } 65%,92% { transform: scale(1); opacity:1 } 100% { opacity:0 } }
+.wv { animation: wv 1.8s ease-in-out infinite; } @keyframes wv { 50% { opacity:.15 } }
+.arrow { animation: ar 1.6s ease-in-out infinite; } @keyframes ar { 50% { transform: translateX(6px) } }
+.dot { animation: dt 1.4s ease-in-out infinite; } @keyframes dt { 50% { opacity:.25 } }
+</style>
+<g class="in"><g class="float">
+<circle cx="200.0" cy="108" r="66" fill="#c4b5fd" opacity=".08"/>
+<rect x="174.0" y="96" width="52" height="24" rx="6" fill="#0f172a" stroke="#c4b5fd" stroke-width="2"/>
+<circle cx="188.0" cy="108" r="3" fill="#c4b5fd" class="dot" style="animation-delay:0.0s"/>
+<circle cx="200.0" cy="108" r="3" fill="#c4b5fd" class="dot" style="animation-delay:0.3s"/>
+<circle cx="212.0" cy="108" r="3" fill="#c4b5fd" class="dot" style="animation-delay:0.6s"/>
+<path d="M188.0,90 a12,12 0 0 1 24,0" fill="none" stroke="#c4b5fd" stroke-width="2" stroke-linecap="round" class="wv" style="animation-delay:0.0s"/>
+<path d="M180.0,88 a20,20 0 0 1 40,0" fill="none" stroke="#c4b5fd" stroke-width="2" stroke-linecap="round" class="wv" style="animation-delay:0.4s"/>
+<line x1="200.0" y1="120" x2="120.0" y2="128" stroke="#c4b5fd" stroke-opacity=".35" stroke-dasharray="3 4"/>
+<text x="120.0" y="146" text-anchor="middle" font-size="20">💻</text>
+<rect x="136.0" y="120" width="7" height="40" rx="2" fill="#1e293b"/>
+<rect x="136.0" y="120" width="7" height="40" rx="2" fill="#c4b5fd"><animate attributeName="height" values="40;14;24;40" dur="4s" repeatCount="indefinite"/><animate attributeName="y" values="120;146;136;120" dur="4s" repeatCount="indefinite"/></rect>
+<line x1="200.0" y1="120" x2="200.0" y2="144" stroke="#c4b5fd" stroke-opacity=".35" stroke-dasharray="3 4"/>
+<text x="200.0" y="162" text-anchor="middle" font-size="20">📱</text>
+<rect x="216.0" y="136" width="7" height="40" rx="2" fill="#1e293b"/>
+<rect x="216.0" y="162" width="7" height="14" rx="2" fill="#c4b5fd"><animate attributeName="height" values="14;36;20;14" dur="4s" repeatCount="indefinite"/><animate attributeName="y" values="162;140;156;162" dur="4s" repeatCount="indefinite"/></rect>
+<line x1="200.0" y1="120" x2="280.0" y2="128" stroke="#c4b5fd" stroke-opacity=".35" stroke-dasharray="3 4"/>
+<text x="280.0" y="146" text-anchor="middle" font-size="20">📺</text>
+<rect x="296.0" y="120" width="7" height="40" rx="2" fill="#1e293b"/>
+<rect x="296.0" y="136" width="7" height="24" rx="2" fill="#c4b5fd"><animate attributeName="height" values="24;20;36;24" dur="4s" repeatCount="indefinite"/><animate attributeName="y" values="136;140;124;136" dur="4s" repeatCount="indefinite"/></rect>
+</g></g>
+<g class="in" style="animation-delay:.2s"><rect x="282" y="22" width="94" height="24" rx="12" fill="#c4b5fd" fill-opacity=".15" stroke="#c4b5fd" stroke-opacity=".5"/><circle cx="295" cy="34" r="3.5" fill="#c4b5fd" class="dot"/><text x="304" y="38.5" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" fill="#c4b5fd">🚀 Planned</text></g>
+<g class="in" style="animation-delay:.3s">
+<text x="28" y="222" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="25" font-weight="800" fill="#c4b5fd">Attention-Aware LAN</text>
+<text x="28" y="246" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#94a3b8">Distributed Bandwidth Coordination</text>
+<text x="28" y="280" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15.5" fill="#cbd5e1">Will share bandwidth fairly across</text>
+<text x="28" y="302" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15.5" fill="#cbd5e1">devices on home and office</text>
+<text x="28" y="324" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15.5" fill="#cbd5e1">networks.</text>
+<rect x="28" y="344" width="91" height="28" rx="14" fill="#c4b5fd" fill-opacity=".1" stroke="#c4b5fd" stroke-opacity=".55"/><text x="74" y="363" text-anchor="middle" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" fill="#c4b5fd">Networking</text>
+<rect x="126" y="344" width="155" height="28" rx="14" fill="#c4b5fd" fill-opacity=".1" stroke="#c4b5fd" stroke-opacity=".55"/><text x="204" y="363" text-anchor="middle" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" fill="#c4b5fd">Distributed Systems</text>
+</g>
+<rect x="12" y="12" width="376" height="406" rx="16" fill="none" stroke="#c4b5fd" stroke-opacity=".45" stroke-width="1.5" stroke-dasharray="8 7"><animate attributeName="stroke-dashoffset" values="0;-60" dur="3s" repeatCount="indefinite"/></rect>
+<line x1="28" y1="390" x2="372" y2="390" stroke="#c4b5fd" stroke-opacity=".15"/>
+<text x="28" y="414" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#c4b5fd">View on GitHub <tspan class="arrow">→</tspan></text>
+<text x="372" y="414" text-anchor="end" font-size="14" fill="#94a3b8" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">⭐</text>
+</g>
+<rect x="2" y="2" width="396" height="426" rx="23" fill="none" stroke="url(#border)" stroke-width="2" opacity="0.45"/>
+</svg>

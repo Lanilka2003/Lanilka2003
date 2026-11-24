@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 430" width="400" height="430">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#09090b"/><stop offset=".6" stop-color="#0b0b10"/><stop offset="1" stop-color="#0d0d12"/></linearGradient>
+<linearGradient id="border" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="400" y2="430">
+  <stop offset="0" stop-color="#67e8f9"/><stop offset=".33" stop-color="#a78bfa"/><stop offset=".66" stop-color="#f472b6"/><stop offset="1" stop-color="#67e8f9"/>
+  <animateTransform attributeName="gradientTransform" type="rotate" from="0 200.0 215.0" to="360 200.0 215.0" dur="8s" repeatCount="indefinite"/>
+</linearGradient>
+<linearGradient id="title" gradientUnits="userSpaceOnUse" x1="40" y1="0" x2="420" y2="0" spreadMethod="reflect">
+  <stop offset="0" stop-color="#67e8f9"/><stop offset=".5" stop-color="#c4b5fd"/><stop offset="1" stop-color="#f9a8d4"/>
+  <animateTransform attributeName="gradientTransform" type="translate" values="0 0;380 0;0 0" dur="7s" repeatCount="indefinite"/>
+</linearGradient>
+<filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<clipPath id="clip"><rect x="3" y="3" width="394" height="424" rx="22"/></clipPath>
+</defs>
+<style>
+.in { animation: up .9s cubic-bezier(.2,.8,.2,1) backwards; }
+@keyframes up { from { opacity:0; transform: translateY(14px) } to { opacity:1; transform:none } }
+.tw { animation: tw 3s ease-in-out infinite; } @keyframes tw { 0%,100% { opacity:.1 } 50% { opacity:1 } }
+.o1 { animation: o1 14s ease-in-out infinite; } @keyframes o1 { 50% { transform: translate(90px,20px) } }
+.o2 { animation: o2 17s ease-in-out infinite; } @keyframes o2 { 50% { transform: translate(-90px,-20px) } }
+.pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2.6s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { transform: scale(.85); opacity:.6 } 50% { transform: scale(1.15); opacity:1 } }
+.float { animation: fl 5s ease-in-out infinite; } @keyframes fl { 50% { transform: translateY(-6px) } }
+.blink { animation: bl 1s step-end infinite; } @keyframes bl { 50% { opacity:0 } }
+.shoot { animation: shoot 8s ease-in infinite; opacity:0; }
+@keyframes shoot { 0% { transform: translate(0,0); opacity:0 } 2% { opacity:1 } 12% { transform: translate(360px,130px); opacity:0 } 100% { opacity:0 } }
+</style>
+<g clip-path="url(#clip)">
+<rect width="400" height="430" fill="url(#bg)"/>
+<defs><pattern id="pat" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="9" height="26" fill="#ffffff" fill-opacity=".02"/><animateTransform attributeName="patternTransform" type="translate" additive="sum" from="0 0" to="26 0" dur="5s" repeatCount="indefinite"/></pattern></defs>
+<rect width="400" height="430" fill="url(#pat)"/>
+<circle cx="357" cy="293" r="0.9" fill="#ffffff" class="tw" style="animation-delay:-1.04s;animation-duration:3.9s"/>
+<circle cx="357" cy="371" r="0.9" fill="#ffffff" class="tw" style="animation-delay:-0.11s;animation-duration:3.2s"/>
+<circle cx="35" cy="58" r="1.4" fill="#ffffff" class="tw" style="animation-delay:-3.80s;animation-duration:3.3s"/>
+<circle cx="87" cy="138" r="1.1" fill="#ffffff" class="tw" style="animation-delay:-1.31s;animation-duration:2.3s"/>
+<circle cx="207" cy="358" r="1.4" fill="#ffffff" class="tw" style="animation-delay:-0.33s;animation-duration:3.7s"/>
+<circle cx="20" cy="46" r="0.9" fill="#ffffff" class="tw" style="animation-delay:-1.01s;animation-duration:4.3s"/>
+<circle cx="124" cy="113" r="0.7" fill="#ffffff" class="tw" style="animation-delay:-3.62s;animation-duration:2.8s"/>
+<style>
+.grow { transform-box: fill-box; transform-origin: bottom center; animation: grow 4s ease-out infinite; }
+@keyframes grow { 0% { transform: scaleY(.2) } 50%,100% { transform: scaleY(1) } }
+.leaf { transform-box: fill-box; transform-origin: center; animation: leaf 4s ease-out infinite; }
+@keyframes leaf { 0%,25% { transform: scale(0) } 55%,100% { transform: scale(1) } }
+.drop { animation: drop 2s ease-in infinite; }
+@keyframes drop { 0% { transform: translateY(-14px); opacity:0 } 30% { opacity:1 } 100% { transform: translateY(16px); opacity:0 } }
+.check { stroke-dasharray: 40; animation: check 3s ease-out infinite; }
+@keyframes check { 0%,30% { stroke-dashoffset: 40 } 55%,100% { stroke-dashoffset: 0 } }
+.pop { transform-box: fill-box; transform-origin: left center; animation: pop 3s ease-out infinite; }
+@keyframes pop { 0%,50% { transform: scale(0); opacity:0 } 65%,92% { transform: scale(1); opacity:1 } 100% { opacity:0 } }
+.wv { animation: wv 1.8s ease-in-out infinite; } @keyframes wv { 50% { opacity:.15 } }
+.arrow { animation: ar 1.6s ease-in-out infinite; } @keyframes ar { 50% { transform: translateX(6px) } }
+.dot { animation: dt 1.4s ease-in-out infinite; } @keyframes dt { 50% { opacity:.25 } }
+</style>
+<g class="in"><g class="float">
+<circle cx="200.0" cy="108" r="66" fill="#67e8f9" opacity=".08"/>
+<path d="M190.0,78 q10,-14 22,-12" fill="none" stroke="#65a30d" stroke-width="3" stroke-linecap="round"/>
+<ellipse cx="200.0" cy="112" rx="26" ry="30" fill="#84cc16"><animate attributeName="fill" values="#84cc16;#facc15;#fb923c;#facc15;#84cc16" dur="6s" repeatCount="indefinite"/></ellipse>
+<ellipse cx="191.0" cy="102" rx="6" ry="10" fill="#fff" opacity=".25"/>
+<path d="M242.0,94 q8,14 0,28" fill="none" stroke="#67e8f9" stroke-width="2.2" stroke-linecap="round" class="wv" style="animation-delay:0.0s"/>
+<path d="M158.0,94 q-8,14 0,28" fill="none" stroke="#67e8f9" stroke-width="2.2" stroke-linecap="round" class="wv" style="animation-delay:0.0s"/>
+<path d="M251.0,94 q8,14 0,28" fill="none" stroke="#67e8f9" stroke-width="2.2" stroke-linecap="round" class="wv" style="animation-delay:0.3s"/>
+<path d="M149.0,94 q-8,14 0,28" fill="none" stroke="#67e8f9" stroke-width="2.2" stroke-linecap="round" class="wv" style="animation-delay:0.3s"/>
+<path d="M260.0,94 q8,14 0,28" fill="none" stroke="#67e8f9" stroke-width="2.2" stroke-linecap="round" class="wv" style="animation-delay:0.6s"/>
+<path d="M140.0,94 q-8,14 0,28" fill="none" stroke="#67e8f9" stroke-width="2.2" stroke-linecap="round" class="wv" style="animation-delay:0.6s"/>
+</g></g>
+<g class="in" style="animation-delay:.3s">
+<text x="28" y="222" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="25" font-weight="800" fill="#67e8f9">TropicStore</text>
+<text x="28" y="246" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#94a3b8">Smart Fruit Ripening Chamber · 2026</text>
+<text x="28" y="280" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15.5" fill="#cbd5e1">ESP32 firmware controls fan, mist,</text>
+<text x="28" y="302" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15.5" fill="#cbd5e1">vent and lights from temperature,</text>
+<text x="28" y="324" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15.5" fill="#cbd5e1">humidity and gas, tuned via AWS.</text>
+<rect x="28" y="344" width="56" height="28" rx="14" fill="#67e8f9" fill-opacity=".1" stroke="#67e8f9" stroke-opacity=".55"/><text x="56" y="363" text-anchor="middle" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" fill="#67e8f9">ESP32</text>
+<rect x="91" y="344" width="49" height="28" rx="14" fill="#67e8f9" fill-opacity=".1" stroke="#67e8f9" stroke-opacity=".55"/><text x="115" y="363" text-anchor="middle" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" fill="#67e8f9">MQTT</text>
+<rect x="146" y="344" width="70" height="28" rx="14" fill="#67e8f9" fill-opacity=".1" stroke="#67e8f9" stroke-opacity=".55"/><text x="181" y="363" text-anchor="middle" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" fill="#67e8f9">AWS IoT</text>
+<rect x="223" y="344" width="91" height="28" rx="14" fill="#67e8f9" fill-opacity=".1" stroke="#67e8f9" stroke-opacity=".55"/><text x="269" y="363" text-anchor="middle" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" fill="#67e8f9">TypeScript</text>
+</g>
+<line x1="28" y1="390" x2="372" y2="390" stroke="#67e8f9" stroke-opacity=".15"/>
+<text x="28" y="414" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#67e8f9">View on GitHub <tspan class="arrow">→</tspan></text>
+<text x="372" y="414" text-anchor="end" font-size="14" fill="#94a3b8" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">⭐</text>
+</g>
+<rect x="2" y="2" width="396" height="426" rx="23" fill="none" stroke="url(#border)" stroke-width="2" opacity="0.45"/>
+</svg>

@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 350" width="1200" height="350">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#09090b"/><stop offset=".6" stop-color="#0b0b10"/><stop offset="1" stop-color="#0d0d12"/></linearGradient>
+<linearGradient id="border" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1200" y2="350">
+  <stop offset="0" stop-color="#67e8f9"/><stop offset=".33" stop-color="#a78bfa"/><stop offset=".66" stop-color="#f472b6"/><stop offset="1" stop-color="#67e8f9"/>
+  <animateTransform attributeName="gradientTransform" type="rotate" from="0 600.0 175.0" to="360 600.0 175.0" dur="8s" repeatCount="indefinite"/>
+</linearGradient>
+<linearGradient id="title" gradientUnits="userSpaceOnUse" x1="40" y1="0" x2="420" y2="0" spreadMethod="reflect">
+  <stop offset="0" stop-color="#67e8f9"/><stop offset=".5" stop-color="#c4b5fd"/><stop offset="1" stop-color="#f9a8d4"/>
+  <animateTransform attributeName="gradientTransform" type="translate" values="0 0;380 0;0 0" dur="7s" repeatCount="indefinite"/>
+</linearGradient>
+<filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<clipPath id="clip"><rect x="3" y="3" width="1194" height="344" rx="22"/></clipPath>
+</defs>
+<style>
+.in { animation: up .9s cubic-bezier(.2,.8,.2,1) backwards; }
+@keyframes up { from { opacity:0; transform: translateY(14px) } to { opacity:1; transform:none } }
+.tw { animation: tw 3s ease-in-out infinite; } @keyframes tw { 0%,100% { opacity:.1 } 50% { opacity:1 } }
+.o1 { animation: o1 14s ease-in-out infinite; } @keyframes o1 { 50% { transform: translate(90px,20px) } }
+.o2 { animation: o2 17s ease-in-out infinite; } @keyframes o2 { 50% { transform: translate(-90px,-20px) } }
+.pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2.6s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { transform: scale(.85); opacity:.6 } 50% { transform: scale(1.15); opacity:1 } }
+.float { animation: fl 5s ease-in-out infinite; } @keyframes fl { 50% { transform: translateY(-6px) } }
+.blink { animation: bl 1s step-end infinite; } @keyframes bl { 50% { opacity:0 } }
+.shoot { animation: shoot 8s ease-in infinite; opacity:0; }
+@keyframes shoot { 0% { transform: translate(0,0); opacity:0 } 2% { opacity:1 } 12% { transform: translate(360px,130px); opacity:0 } 100% { opacity:0 } }
+</style>
+<g clip-path="url(#clip)">
+<rect width="1200" height="350" fill="url(#bg)"/>
+<path d="M-200,79.5 L-190,78.9 L-180,78.4 L-170,78.0 L-160,77.7 L-150,77.5 L-140,77.5 L-130,77.6 L-120,77.8 L-110,78.1 L-100,78.5 L-90,79.1 L-80,79.7 L-70,80.5 L-60,81.3 L-50,82.2 L-40,83.2 L-30,84.2 L-20,85.3 L-10,86.4 L0,87.5 L10,88.6 L20,89.7 L30,90.8 L40,91.8 L50,92.8 L60,93.7 L70,94.5 L80,95.3 L90,95.9 L100,96.5 L110,96.9 L120,97.2 L130,97.4 L140,97.5 L150,97.5 L160,97.3 L170,97.0 L180,96.6 L190,96.1 L200,95.5 L210,94.7 L220,93.9 L230,93.0 L240,92.1 L250,91.1 L260,90.0 L270,88.9 L280,87.8 L290,86.7 L300,85.6 L310,84.5 L320,83.5 L330,82.5 L340,81.6 L350,80.7 L360,79.9 L370,79.3 L380,78.7 L390,78.2 L400,77.9 L410,77.6 L420,77.5 L430,77.5 L440,77.7 L450,77.9 L460,78.3 L470,78.8 L480,79.4 L490,80.1 L500,80.8 L510,81.7 L520,82.7 L530,83.7 L540,84.7 L550,85.8 L560,86.9 L570,88.0 L580,89.1 L590,90.2 L600,91.2 L610,92.2 L620,93.2 L630,94.1 L640,94.9 L650,95.6 L660,96.2 L670,96.7 L680,97.1 L690,97.3 L700,97.5 L710,97.5 L720,97.4 L730,97.2 L740,96.8 L750,96.4 L760,95.8 L770,95.1 L780,94.4 L790,93.5 L800,92.6 L810,91.6 L820,90.6 L830,89.5 L840,88.4 L850,87.3 L860,86.2 L870,85.1 L880,84.0 L890,83.0 L900,82.1 L910,81.2 L920,80.3 L930,79.6 L940,79.0 L950,78.5 L960,78.0 L970,77.7 L980,77.6 L990,77.5 L1000,77.6 L1010,77.8 L1020,78.1 L1030,78.5 L1040,79.0 L1050,79.7 L1060,80.4 L1070,81.2 L1080,82.1 L1090,83.1 L1100,84.1 L1110,85.2 L1120,86.3 L1130,87.4 L1140,88.5 L1150,89.6 L1160,90.7 L1170,91.7 L1180,92.7 L1190,93.6 L1200,94.4 L1210,95.2 L1220,95.9 L1230,96.4 L1240,96.9 L1250,97.2 L1260,97.4 L1270,97.5 L1280,97.5 L1290,97.3 L1300,97.0 L1310,96.6 L1320,96.1 L1330,95.5 L1340,94.8 L1350,94.0 L1360,93.1 L1370,92.2 L1380,91.2 L1390,90.1 L1400,89.0" fill="none" stroke="#67e8f9" stroke-opacity=".05" stroke-width="2"><animateTransform attributeName="transform" type="translate" values="0 0;180 0;0 0" dur="14s" repeatCount="indefinite"/></path>
+<path d="M-200,126.8 L-190,127.5 L-180,128.2 L-170,129.1 L-160,130.2 L-150,131.3 L-140,132.6 L-130,134.0 L-120,135.4 L-110,136.9 L-100,138.4 L-90,140.0 L-80,141.6 L-70,143.1 L-60,144.6 L-50,146.0 L-40,147.4 L-30,148.7 L-20,149.8 L-10,150.9 L0,151.8 L10,152.5 L20,153.2 L30,153.6 L40,153.9 L50,154.0 L60,153.9 L70,153.7 L80,153.3 L90,152.7 L100,152.0 L110,151.1 L120,150.1 L130,149.0 L140,147.7 L150,146.4 L160,145.0 L170,143.5 L180,142.0 L190,140.4 L200,138.9 L210,137.3 L220,135.8 L230,134.4 L240,133.0 L250,131.7 L260,130.5 L270,129.4 L280,128.5 L290,127.6 L300,127.0 L310,126.5 L320,126.2 L330,126.0 L340,126.0 L350,126.2 L360,126.6 L370,127.1 L380,127.8 L390,128.6 L400,129.6 L410,130.7 L420,131.9 L430,133.2 L440,134.6 L450,136.1 L460,137.6 L470,139.1 L480,140.7 L490,142.2 L500,143.8 L510,145.2 L520,146.6 L530,148.0 L540,149.2 L550,150.3 L560,151.3 L570,152.1 L580,152.8 L590,153.4 L600,153.8 L610,154.0 L620,154.0 L630,153.9 L640,153.5 L650,153.1 L660,152.4 L670,151.6 L680,150.7 L690,149.6 L700,148.4 L710,147.1 L720,145.8 L730,144.3 L740,142.8 L750,141.3 L760,139.7 L770,138.2 L780,136.6 L790,135.2 L800,133.7 L810,132.4 L820,131.1 L830,130.0 L840,129.0 L850,128.1 L860,127.3 L870,126.8 L880,126.3 L890,126.1 L900,126.0 L910,126.1 L920,126.4 L930,126.8 L940,127.4 L950,128.1 L960,129.0 L970,130.1 L980,131.2 L990,132.5 L1000,133.8 L1010,135.3 L1020,136.8 L1030,138.3 L1040,139.8 L1050,141.4 L1060,142.9 L1070,144.4 L1080,145.9 L1090,147.3 L1100,148.5 L1110,149.7 L1120,150.8 L1130,151.7 L1140,152.5 L1150,153.1 L1160,153.6 L1170,153.9 L1180,154.0 L1190,153.9 L1200,153.7 L1210,153.3 L1220,152.8 L1230,152.1 L1240,151.2 L1250,150.2 L1260,149.1 L1270,147.9 L1280,146.5 L1290,145.1 L1300,143.6 L1310,142.1 L1320,140.6 L1330,139.0 L1340,137.5 L1350,136.0 L1360,134.5 L1370,133.1 L1380,131.8 L1390,130.6 L1400,129.5" fill="none" stroke="#c4b5fd" stroke-opacity=".05" stroke-width="2"><animateTransform attributeName="transform" type="translate" values="0 0;-180 0;0 0" dur="17s" repeatCount="indefinite"/></path>
+<path d="M-200,188.5 L-190,190.5 L-180,192.5 L-170,194.5 L-160,196.5 L-150,198.4 L-140,200.2 L-130,202.0 L-120,203.6 L-110,205.1 L-100,206.5 L-90,207.6 L-80,208.6 L-70,209.4 L-60,210.0 L-50,210.4 L-40,210.5 L-30,210.4 L-20,210.1 L-10,209.6 L0,208.9 L10,207.9 L20,206.8 L30,205.5 L40,204.1 L50,202.5 L60,200.7 L70,198.9 L80,197.0 L90,195.0 L100,193.0 L110,191.1 L120,189.1 L130,187.1 L140,185.3 L150,183.5 L160,181.8 L170,180.3 L180,178.9 L190,177.7 L200,176.6 L210,175.8 L220,175.1 L230,174.7 L240,174.5 L250,174.5 L260,174.8 L270,175.2 L280,175.9 L290,176.8 L300,177.9 L310,179.1 L320,180.5 L330,182.1 L340,183.8 L350,185.6 L360,187.5 L370,189.4 L380,191.4 L390,193.4 L400,195.4 L410,197.3 L420,199.2 L430,201.0 L440,202.7 L450,204.3 L460,205.8 L470,207.0 L480,208.1 L490,209.0 L500,209.7 L510,210.2 L520,210.4 L530,210.5 L540,210.3 L550,209.9 L560,209.3 L570,208.5 L580,207.5 L590,206.2 L600,204.9 L610,203.4 L620,201.7 L630,199.9 L640,198.1 L650,196.1 L660,194.1 L670,192.1 L680,190.2 L690,188.2 L700,186.3 L710,184.4 L720,182.7 L730,181.1 L740,179.6 L750,178.3 L760,177.2 L770,176.2 L780,175.5 L790,174.9 L800,174.6 L810,174.5 L820,174.6 L830,175.0 L840,175.5 L850,176.3 L860,177.2 L870,178.4 L880,179.7 L890,181.2 L900,182.8 L910,184.6 L920,186.4 L930,188.3 L940,190.3 L950,192.3 L960,194.3 L970,196.3 L980,198.2 L990,200.1 L1000,201.8 L1010,203.5 L1020,205.0 L1030,206.4 L1040,207.5 L1050,208.5 L1060,209.4 L1070,209.9 L1080,210.3 L1090,210.5 L1100,210.4 L1110,210.2 L1120,209.7 L1130,208.9 L1140,208.0 L1150,206.9 L1160,205.6 L1170,204.2 L1180,202.6 L1190,200.9 L1200,199.1 L1210,197.2 L1220,195.2 L1230,193.2 L1240,191.2 L1250,189.3 L1260,187.3 L1270,185.4 L1280,183.6 L1290,182.0 L1300,180.4 L1310,179.0 L1320,177.8 L1330,176.7 L1340,175.9 L1350,175.2 L1360,174.8 L1370,174.5 L1380,174.5 L1390,174.7 L1400,175.2" fill="none" stroke="#f9a8d4" stroke-opacity=".05" stroke-width="2"><animateTransform attributeName="transform" type="translate" values="0 0;180 0;0 0" dur="20s" repeatCount="indefinite"/></path>
+<path d="M-200,260.4 L-190,262.1 L-180,263.5 L-170,264.7 L-160,265.7 L-150,266.4 L-140,266.8 L-130,267.0 L-120,266.9 L-110,266.5 L-100,265.9 L-90,265.0 L-80,263.9 L-70,262.5 L-60,260.9 L-50,259.1 L-40,257.2 L-30,255.1 L-20,252.8 L-10,250.5 L0,248.1 L10,245.7 L20,243.2 L30,240.8 L40,238.4 L50,236.2 L60,234.0 L70,231.9 L80,230.0 L90,228.4 L100,226.9 L110,225.6 L120,224.6 L130,223.8 L140,223.3 L150,223.0 L160,223.0 L170,223.3 L180,223.9 L190,224.7 L200,225.8 L210,227.1 L220,228.6 L230,230.4 L240,232.3 L250,234.3 L260,236.5 L270,238.9 L280,241.2 L290,243.7 L300,246.1 L310,248.5 L320,250.9 L330,253.2 L340,255.4 L350,257.5 L360,259.5 L370,261.2 L380,262.8 L390,264.1 L400,265.2 L410,266.0 L420,266.6 L430,266.9 L440,267.0 L450,266.8 L460,266.3 L470,265.5 L480,264.5 L490,263.3 L500,261.8 L510,260.1 L520,258.3 L530,256.2 L540,254.1 L550,251.8 L560,249.4 L570,247.0 L580,244.6 L590,242.1 L600,239.7 L610,237.4 L620,235.2 L630,233.0 L640,231.1 L650,229.3 L660,227.7 L670,226.3 L680,225.1 L690,224.2 L700,223.5 L710,223.1 L720,223.0 L730,223.1 L740,223.6 L750,224.2 L760,225.2 L770,226.4 L780,227.8 L790,229.4 L800,231.2 L810,233.2 L820,235.3 L830,237.6 L840,239.9 L850,242.3 L860,244.8 L870,247.2 L880,249.6 L890,252.0 L900,254.2 L910,256.4 L920,258.4 L930,260.3 L940,261.9 L950,263.4 L960,264.6 L970,265.6 L980,266.3 L990,266.8 L1000,267.0 L1010,266.9 L1020,266.6 L1030,266.0 L1040,265.1 L1050,264.0 L1060,262.6 L1070,261.1 L1080,259.3 L1090,257.4 L1100,255.3 L1110,253.1 L1120,250.7 L1130,248.3 L1140,245.9 L1150,243.5 L1160,241.0 L1170,238.7 L1180,236.4 L1190,234.2 L1200,232.1 L1210,230.2 L1220,228.5 L1230,227.0 L1240,225.7 L1250,224.7 L1260,223.8 L1270,223.3 L1280,223.0 L1290,223.0 L1300,223.3 L1310,223.8 L1320,224.6 L1330,225.7 L1340,227.0 L1350,228.5 L1360,230.2 L1370,232.1 L1380,234.1 L1390,236.3 L1400,238.6" fill="none" stroke="#67e8f9" stroke-opacity=".05" stroke-width="2"><animateTransform attributeName="transform" type="translate" values="0 0;-180 0;0 0" dur="23s" repeatCount="indefinite"/></path>
+<path d="M-200,322.9 L-190,322.2 L-180,321.1 L-170,319.8 L-160,318.2 L-150,316.3 L-140,314.2 L-130,311.9 L-120,309.4 L-110,306.8 L-100,304.0 L-90,301.2 L-80,298.3 L-70,295.4 L-60,292.5 L-50,289.7 L-40,287.0 L-30,284.5 L-20,282.1 L-10,279.8 L0,277.8 L10,276.1 L20,274.6 L30,273.3 L40,272.4 L50,271.8 L60,271.5 L70,271.6 L80,271.9 L90,272.6 L100,273.5 L110,274.8 L120,276.4 L130,278.2 L140,280.2 L150,282.5 L160,284.9 L170,287.5 L180,290.2 L190,293.0 L200,295.9 L210,298.8 L220,301.7 L230,304.5 L240,307.2 L250,309.8 L260,312.3 L270,314.6 L280,316.6 L290,318.5 L300,320.1 L310,321.3 L320,322.4 L330,323.0 L340,323.4 L350,323.5 L360,323.2 L370,322.6 L380,321.8 L390,320.6 L400,319.1 L410,317.4 L420,315.4 L430,313.2 L440,310.8 L450,308.2 L460,305.5 L470,302.7 L480,299.9 L490,297.0 L500,294.1 L510,291.3 L520,288.5 L530,285.9 L540,283.4 L550,281.0 L560,278.9 L570,277.0 L580,275.3 L590,274.0 L600,272.9 L610,272.1 L620,271.6 L630,271.5 L640,271.7 L650,272.2 L660,273.0 L670,274.1 L680,275.5 L690,277.1 L700,279.1 L710,281.2 L720,283.5 L730,286.1 L740,288.7 L750,291.5 L760,294.3 L770,297.2 L780,300.1 L790,303.0 L800,305.7 L810,308.4 L820,311.0 L830,313.4 L840,315.5 L850,317.5 L860,319.2 L870,320.7 L880,321.8 L890,322.7 L900,323.3 L910,323.5 L920,323.4 L930,323.0 L940,322.3 L950,321.3 L960,319.9 L970,318.3 L980,316.5 L990,314.4 L1000,312.1 L1010,309.6 L1020,307.0 L1030,304.3 L1040,301.4 L1050,298.6 L1060,295.7 L1070,292.8 L1080,290.0 L1090,287.3 L1100,284.7 L1110,282.3 L1120,280.0 L1130,278.0 L1140,276.2 L1150,274.7 L1160,273.5 L1170,272.5 L1180,271.9 L1190,271.5 L1200,271.5 L1210,271.9 L1220,272.5 L1230,273.4 L1240,274.7 L1250,276.2 L1260,278.0 L1270,280.0 L1280,282.2 L1290,284.7 L1300,287.3 L1310,290.0 L1320,292.8 L1330,295.6 L1340,298.5 L1350,301.4 L1360,304.2 L1370,307.0 L1380,309.6 L1390,312.1 L1400,314.4" fill="none" stroke="#c4b5fd" stroke-opacity=".05" stroke-width="2"><animateTransform attributeName="transform" type="translate" values="0 0;180 0;0 0" dur="26s" repeatCount="indefinite"/></path>
+<circle cx="948" cy="284" r="1.4" fill="#ffffff" class="tw" style="animation-delay:-3.05s;animation-duration:2.1s"/>
+<circle cx="179" cy="204" r="1.1" fill="#ffffff" class="tw" style="animation-delay:-1.28s;animation-duration:2.1s"/>
+<circle cx="587" cy="73" r="1.4" fill="#ffffff" class="tw" style="animation-delay:-3.64s;animation-duration:3.6s"/>
+<circle cx="118" cy="196" r="1.1" fill="#ffffff" class="tw" style="animation-delay:-2.65s;animation-duration:3.8s"/>
+<circle cx="111" cy="150" r="0.7" fill="#ffffff" class="tw" style="animation-delay:-1.45s;animation-duration:3.2s"/>
+<circle cx="304" cy="242" r="0.9" fill="#ffffff" class="tw" style="animation-delay:-2.80s;animation-duration:4.4s"/>
+<circle cx="122" cy="21" r="0.9" fill="#ffffff" class="tw" style="animation-delay:-3.31s;animation-duration:4.7s"/>
+<circle cx="584" cy="287" r="0.9" fill="#ffffff" class="tw" style="animation-delay:-2.06s;animation-duration:3.9s"/>
+<circle cx="835" cy="278" r="0.7" fill="#ffffff" class="tw" style="animation-delay:-2.53s;animation-duration:2.7s"/>
+<circle cx="516" cy="127" r="0.7" fill="#ffffff" class="tw" style="animation-delay:-0.36s;animation-duration:4.6s"/>
+<circle cx="630" cy="45" r="1.1" fill="#ffffff" class="tw" style="animation-delay:-1.25s;animation-duration:2.6s"/>
+<circle cx="581" cy="53" r="0.9" fill="#ffffff" class="tw" style="animation-delay:-3.34s;animation-duration:4.6s"/>
+<circle cx="626" cy="70" r="0.9" fill="#ffffff" class="tw" style="animation-delay:-0.07s;animation-duration:3.0s"/>
+<circle cx="1080" cy="216" r="1.1" fill="#ffffff" class="tw" style="animation-delay:-1.50s;animation-duration:3.6s"/>
+<circle cx="350" cy="235" r="1.4" fill="#ffffff" class="tw" style="animation-delay:-0.22s;animation-duration:3.3s"/>
+<style>
+.bob { animation: bob 4s ease-in-out infinite; } @keyframes bob { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-8px) } }
+.spin { transform-box: fill-box; transform-origin: center; animation: spin 12s linear infinite; } @keyframes spin { to { transform: rotate(360deg) } }
+.bar { animation: shine 3s ease-in-out infinite; } @keyframes shine { 0%,100% { opacity:1 } 50% { opacity:.4 } }
+</style>
+<g class="in"><text x="44" y="62" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="30" font-weight="800" fill="url(#title)"><tspan class="pulse" fill="#c4b5fd">✦</tspan> What I Do</text></g>
+<g class="in" style="animation-delay:0.20s"><g class="bob" style="animation-delay:-0.0s">
+<rect x="51.0" y="96" width="206" height="224" rx="16" fill="#ffffff" fill-opacity=".045" stroke="#67e8f9" stroke-opacity=".35" stroke-width="1.5"/>
+<rect x="51.0" y="93" width="206" height="6" rx="3" fill="#67e8f9" class="bar" filter="url(#glow)" style="animation-delay:-0.0s"/>
+<circle cx="154.0" cy="166" r="44" fill="none" stroke="#67e8f9" stroke-opacity=".6" stroke-width="1.5" stroke-dasharray="4 7" class="spin"/>
+<circle cx="154.0" cy="166" r="34" fill="#67e8f9" fill-opacity=".14" class="pulse" style="animation-delay:-0.0s"/>
+<text x="154.0" y="180" text-anchor="middle" font-size="38">☁️</text>
+<text x="154.0" y="244" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="19" font-weight="800" fill="#67e8f9">Cloud</text>
+<text x="154.0" y="274" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" fill="#cbd5e1">Serverless apps on</text>
+<text x="154.0" y="295" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" fill="#cbd5e1">AWS Lambda &amp; DynamoDB</text>
+</g></g>
+<g class="in" style="animation-delay:0.35s"><g class="bob" style="animation-delay:-0.8s">
+<rect x="274.0" y="96" width="206" height="224" rx="16" fill="#ffffff" fill-opacity=".045" stroke="#c4b5fd" stroke-opacity=".35" stroke-width="1.5"/>
+<rect x="274.0" y="93" width="206" height="6" rx="3" fill="#c4b5fd" class="bar" filter="url(#glow)" style="animation-delay:-0.6s"/>
+<circle cx="377.0" cy="166" r="44" fill="none" stroke="#c4b5fd" stroke-opacity=".6" stroke-width="1.5" stroke-dasharray="4 7" class="spin"/>
+<circle cx="377.0" cy="166" r="34" fill="#c4b5fd" fill-opacity=".14" class="pulse" style="animation-delay:-0.5s"/>
+<text x="377.0" y="180" text-anchor="middle" font-size="38">📡</text>
+<text x="377.0" y="244" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="19" font-weight="800" fill="#c4b5fd">IoT &amp; Embedded</text>
+<text x="377.0" y="274" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" fill="#cbd5e1">ESP32 firmware, sensors</text>
+<text x="377.0" y="295" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" fill="#cbd5e1">&amp; MQTT to the cloud</text>
+</g></g>
+<g class="in" style="animation-delay:0.50s"><g class="bob" style="animation-delay:-1.6s">
+<rect x="497.0" y="96" width="206" height="224" rx="16" fill="#ffffff" fill-opacity=".045" stroke="#f9a8d4" stroke-opacity=".35" stroke-width="1.5"/>
+<rect x="497.0" y="93" width="206" height="6" rx="3" fill="#f9a8d4" class="bar" filter="url(#glow)" style="animation-delay:-1.2s"/>
+<circle cx="600.0" cy="166" r="44" fill="none" stroke="#f9a8d4" stroke-opacity=".6" stroke-width="1.5" stroke-dasharray="4 7" class="spin"/>
+<circle cx="600.0" cy="166" r="34" fill="#f9a8d4" fill-opacity=".14" class="pulse" style="animation-delay:-1.0s"/>
+<text x="600.0" y="180" text-anchor="middle" font-size="38">🧠</text>
+<text x="600.0" y="244" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="19" font-weight="800" fill="#f9a8d4">Machine Learning</text>
+<text x="600.0" y="274" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" fill="#cbd5e1">Classification &amp;</text>
+<text x="600.0" y="295" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" fill="#cbd5e1">clustering with Python</text>
+</g></g>
+<g class="in" style="animation-delay:0.65s"><g class="bob" style="animation-delay:-2.4s">
+<rect x="720.0" y="96" width="206" height="224" rx="16" fill="#ffffff" fill-opacity=".045" stroke="#c4b5fd" stroke-opacity=".35" stroke-width="1.5"/>
+<rect x="720.0" y="93" width="206" height="6" rx="3" fill="#c4b5fd" class="bar" filter="url(#glow)" style="animation-delay:-1.8s"/>
+<circle cx="823.0" cy="166" r="44" fill="none" stroke="#c4b5fd" stroke-opacity=".6" stroke-width="1.5" stroke-dasharray="4 7" class="spin"/>
+<circle cx="823.0" cy="166" r="34" fill="#c4b5fd" fill-opacity=".14" class="pulse" style="animation-delay:-1.5s"/>
+<text x="823.0" y="180" text-anchor="middle" font-size="38">📱</text>
+<text x="823.0" y="244" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="19" font-weight="800" fill="#c4b5fd">Mobile Apps</text>
+<text x="823.0" y="274" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" fill="#cbd5e1">Cross-platform apps with</text>
+<text x="823.0" y="295" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" fill="#cbd5e1">Flutter &amp; React Native</text>
+</g></g>
+<g class="in" style="animation-delay:0.80s"><g class="bob" style="animation-delay:-3.2s">
+<rect x="943.0" y="96" width="206" height="224" rx="16" fill="#ffffff" fill-opacity=".045" stroke="#67e8f9" stroke-opacity=".35" stroke-width="1.5"/>
+<rect x="943.0" y="93" width="206" height="6" rx="3" fill="#67e8f9" class="bar" filter="url(#glow)" style="animation-delay:-2.4s"/>
+<circle cx="1046.0" cy="166" r="44" fill="none" stroke="#67e8f9" stroke-opacity=".6" stroke-width="1.5" stroke-dasharray="4 7" class="spin"/>
+<circle cx="1046.0" cy="166" r="34" fill="#67e8f9" fill-opacity=".14" class="pulse" style="animation-delay:-2.0s"/>
+<text x="1046.0" y="180" text-anchor="middle" font-size="38">🔗</text>
+<text x="1046.0" y="244" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="19" font-weight="800" fill="#67e8f9">Backend &amp; APIs</text>
+<text x="1046.0" y="274" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" fill="#cbd5e1">REST APIs with Flask,</text>
+<text x="1046.0" y="295" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" fill="#cbd5e1">Firebase &amp; API Gateway</text>
+</g></g>
+</g>
+<rect x="2" y="2" width="1196" height="346" rx="23" fill="none" stroke="url(#border)" stroke-width="2" opacity="0.45"/>
+</svg>

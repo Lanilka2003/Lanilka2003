@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 430" width="400" height="430">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#09090b"/><stop offset=".6" stop-color="#0b0b10"/><stop offset="1" stop-color="#0d0d12"/></linearGradient>
+<linearGradient id="border" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="400" y2="430">
+  <stop offset="0" stop-color="#67e8f9"/><stop offset=".33" stop-color="#a78bfa"/><stop offset=".66" stop-color="#f472b6"/><stop offset="1" stop-color="#67e8f9"/>
+  <animateTransform attributeName="gradientTransform" type="rotate" from="0 200.0 215.0" to="360 200.0 215.0" dur="8s" repeatCount="indefinite"/>
+</linearGradient>
+<linearGradient id="title" gradientUnits="userSpaceOnUse" x1="40" y1="0" x2="420" y2="0" spreadMethod="reflect">
+  <stop offset="0" stop-color="#67e8f9"/><stop offset=".5" stop-color="#c4b5fd"/><stop offset="1" stop-color="#f9a8d4"/>
+  <animateTransform attributeName="gradientTransform" type="translate" values="0 0;380 0;0 0" dur="7s" repeatCount="indefinite"/>
+</linearGradient>
+<filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<clipPath id="clip"><rect x="3" y="3" width="394" height="424" rx="22"/></clipPath>
+</defs>
+<style>
+.in { animation: up .9s cubic-bezier(.2,.8,.2,1) backwards; }
+@keyframes up { from { opacity:0; transform: translateY(14px) } to { opacity:1; transform:none } }
+.tw { animation: tw 3s ease-in-out infinite; } @keyframes tw { 0%,100% { opacity:.1 } 50% { opacity:1 } }
+.o1 { animation: o1 14s ease-in-out infinite; } @keyframes o1 { 50% { transform: translate(90px,20px) } }
+.o2 { animation: o2 17s ease-in-out infinite; } @keyframes o2 { 50% { transform: translate(-90px,-20px) } }
+.pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2.6s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { transform: scale(.85); opacity:.6 } 50% { transform: scale(1.15); opacity:1 } }
+.float { animation: fl 5s ease-in-out infinite; } @keyframes fl { 50% { transform: translateY(-6px) } }
+.blink { animation: bl 1s step-end infinite; } @keyframes bl { 50% { opacity:0 } }
+.shoot { animation: shoot 8s ease-in infinite; opacity:0; }
+@keyframes shoot { 0% { transform: translate(0,0); opacity:0 } 2% { opacity:1 } 12% { transform: translate(360px,130px); opacity:0 } 100% { opacity:0 } }
+</style>
+<g clip-path="url(#clip)">
+<rect width="400" height="430" fill="url(#bg)"/>
+<defs><pattern id="pat" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="9" height="26" fill="#ffffff" fill-opacity=".02"/><animateTransform attributeName="patternTransform" type="translate" additive="sum" from="0 0" to="26 0" dur="5s" repeatCount="indefinite"/></pattern></defs>
+<rect width="400" height="430" fill="url(#pat)"/>
+<circle cx="70" cy="294" r="1.1" fill="#ffffff" class="tw" style="animation-delay:-1.92s;animation-duration:2.6s"/>
+<circle cx="314" cy="344" r="0.9" fill="#ffffff" class="tw" style="animation-delay:-2.02s;animation-duration:2.7s"/>
+<circle cx="7" cy="161" r="1.4" fill="#ffffff" class="tw" style="animation-delay:-0.28s;animation-duration:4.4s"/>
+<circle cx="96" cy="103" r="0.7" fill="#ffffff" class="tw" style="animation-delay:-1.75s;animation-duration:5.0s"/>
+<circle cx="305" cy="176" r="1.4" fill="#ffffff" class="tw" style="animation-delay:-0.14s;animation-duration:3.0s"/>
+<circle cx="199" cy="54" r="1.1" fill="#ffffff" class="tw" style="animation-delay:-0.09s;animation-duration:4.2s"/>
+<circle cx="40" cy="344" r="0.7" fill="#ffffff" class="tw" style="animation-delay:-1.81s;animation-duration:3.7s"/>
+<style>
+.grow { transform-box: fill-box; transform-origin: bottom center; animation: grow 4s ease-out infinite; }
+@keyframes grow { 0% { transform: scaleY(.2) } 50%,100% { transform: scaleY(1) } }
+.leaf { transform-box: fill-box; transform-origin: center; animation: leaf 4s ease-out infinite; }
+@keyframes leaf { 0%,25% { transform: scale(0) } 55%,100% { transform: scale(1) } }
+.drop { animation: drop 2s ease-in infinite; }
+@keyframes drop { 0% { transform: translateY(-14px); opacity:0 } 30% { opacity:1 } 100% { transform: translateY(16px); opacity:0 } }
+.check { stroke-dasharray: 40; animation: check 3s ease-out infinite; }
+@keyframes check { 0%,30% { stroke-dashoffset: 40 } 55%,100% { stroke-dashoffset: 0 } }
+.pop { transform-box: fill-box; transform-origin: left center; animation: pop 3s ease-out infinite; }
+@keyframes pop { 0%,50% { transform: scale(0); opacity:0 } 65%,92% { transform: scale(1); opacity:1 } 100% { opacity:0 } }
+.wv { animation: wv 1.8s ease-in-out infinite; } @keyframes wv { 50% { opacity:.15 } }
+.arrow { animation: ar 1.6s ease-in-out infinite; } @keyframes ar { 50% { transform: translateX(6px) } }
+.dot { animation: dt 1.4s ease-in-out infinite; } @keyframes dt { 50% { opacity:.25 } }
+</style>
+<g class="in"><g class="float">
+<circle cx="200.0" cy="108" r="66" fill="#86efac" opacity=".08"/>
+<rect x="140.0" y="134" width="120" height="16" rx="6" fill="#78350f" opacity=".75"/>
+<rect x="198.0" y="78" width="4" height="56" rx="2" fill="#22c55e" class="grow"/>
+<g class="leaf"><ellipse cx="184.0" cy="98" rx="16" ry="7" fill="#4ade80" transform="rotate(-25 184.0 98)"/></g>
+<g class="leaf" style="animation-delay:.3s"><ellipse cx="216.0" cy="86" rx="16" ry="7" fill="#86efac" transform="rotate(25 216.0 86)"/></g>
+<path d="M154.0,94 q-6,9 0,12 q6,-3 0,-12z" fill="#67e8f9" class="drop" style="animation-delay:0.0s"/>
+<path d="M246.0,94 q-6,9 0,12 q6,-3 0,-12z" fill="#67e8f9" class="drop" style="animation-delay:0.9s"/>
+</g></g>
+<g class="in" style="animation-delay:.2s"><rect x="264" y="22" width="112" height="24" rx="12" fill="#86efac" fill-opacity=".15" stroke="#86efac" stroke-opacity=".5"/><circle cx="277" cy="34" r="3.5" fill="#86efac" class="dot"/><text x="286" y="38.5" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11" fill="#86efac">Team project</text></g>
+<g class="in" style="animation-delay:.3s">
+<text x="28" y="222" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="25" font-weight="800" fill="#86efac">Smart Farming</text>
+<text x="28" y="246" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#94a3b8">AI &amp; IoT Crop Advisory App · 2026</text>
+<text x="28" y="280" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15.5" fill="#cbd5e1">Live soil sensing, weather and AI</text>
+<text x="28" y="302" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15.5" fill="#cbd5e1">crop scoring in a Flutter app, with</text>
+<text x="28" y="324" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15.5" fill="#cbd5e1">plant ID and a Gemini chatbot.</text>
+<rect x="28" y="344" width="70" height="28" rx="14" fill="#86efac" fill-opacity=".1" stroke="#86efac" stroke-opacity=".55"/><text x="63" y="363" text-anchor="middle" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" fill="#86efac">Flutter</text>
+<rect x="105" y="344" width="56" height="28" rx="14" fill="#86efac" fill-opacity=".1" stroke="#86efac" stroke-opacity=".55"/><text x="133" y="363" text-anchor="middle" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" fill="#86efac">Flask</text>
+<rect x="168" y="344" width="77" height="28" rx="14" fill="#86efac" fill-opacity=".1" stroke="#86efac" stroke-opacity=".55"/><text x="206" y="363" text-anchor="middle" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" fill="#86efac">Firebase</text>
+<rect x="252" y="344" width="63" height="28" rx="14" fill="#86efac" fill-opacity=".1" stroke="#86efac" stroke-opacity=".55"/><text x="283" y="363" text-anchor="middle" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="11.5" fill="#86efac">Gemini</text>
+</g>
+<line x1="28" y1="390" x2="372" y2="390" stroke="#86efac" stroke-opacity=".15"/>
+<text x="28" y="414" font-family="SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" fill="#86efac">View on GitHub <tspan class="arrow">→</tspan></text>
+<text x="372" y="414" text-anchor="end" font-size="14" fill="#94a3b8" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">⭐</text>
+</g>
+<rect x="2" y="2" width="396" height="426" rx="23" fill="none" stroke="url(#border)" stroke-width="2" opacity="0.45"/>
+</svg>
